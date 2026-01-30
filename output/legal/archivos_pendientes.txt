@@ -1,0 +1,98 @@
+# ARCHIVOS PENDIENTES - ANÁLISIS LEGAL SERIE A
+# Generado: 2026-01-30
+
+## PDFs ESCANEADOS (archivos .txt vacíos que requieren OCR o PDF original)
+
+### ALTA PRIORIDAD - Documentos clave para Due Diligence
+1. COLOMBIA - SHA - Libertario Coffee Roasters Corp VF SIGNED.txt
+   Ubicación PDF: DATA ROOM LIBERTARIO 2025/1. CORPORATIVOS-CORPORATE/1.2 COLOMBIA/ENGLISH/
+   Razón: SHA Colombia firmado - crítico para estructura
+
+2. COLOMBIA - First Amendment to SHA.txt
+   Ubicación PDF: DATA ROOM LIBERTARIO 2025/1. CORPORATIVOS-CORPORATE/1.2 COLOMBIA/ENGLISH/
+   Razón: Enmienda al SHA - puede contener términos modificados
+
+3. INDIA - Shareholders Agreement Miguel Villaquiran.txt
+   Ubicación PDF: DATA ROOM LIBERTARIO 2025/1. CORPORATIVOS-CORPORATE/1.7 INDIA/
+   Razón: SHA con socio local India - crítico para estructura
+
+### MEDIA PRIORIDAD - Documentos corporativos
+4. COLOMBIA - ESTATUTOS LIBERTARIO COFFEE ROASTERS S.A.S..txt
+   Ubicación PDF: DATA ROOM LIBERTARIO 2025/1. CORPORATIVOS-CORPORATE/1.2 COLOMBIA/ESPAÑOL/
+   Razón: Estatutos Colombia
+
+5. PANAMÁ - CERTIFICATION DIRECTORS.txt
+   Ubicación PDF: DATA ROOM LIBERTARIO 2025/1. CORPORATIVOS-CORPORATE/1.1 PANAMA HOLDING/ENGLISH/
+   Razón: Certificación de directores actuales
+
+6. PANAMÁ - Certificado Director Dignatario.txt
+   Ubicación PDF: DATA ROOM LIBERTARIO 2025/1. CORPORATIVOS-CORPORATE/1.1 PANAMA HOLDING/ESPAÑOL/
+   Razón: Certificado director dignatario
+
+7. PANAMÁ - CRP - apostillado.txt
+   Ubicación PDF: DATA ROOM LIBERTARIO 2025/1. CORPORATIVOS-CORPORATE/1.1 PANAMA HOLDING/ESPAÑOL/
+   Razón: Certificado registro público apostillado
+
+8. USA - Futura Certificate.txt
+   Ubicación PDF: DATA ROOM LIBERTARIO 2025/1. CORPORATIVOS-CORPORATE/1.5 USA/
+   Razón: Certificado de formación LLC
+
+### MEDIA PRIORIDAD - México (documentos notariales)
+9. MEXICO - ESCRITURA CAPITALIZACIÓN MASANAMACAYA.txt
+   Ubicación PDF: DATA ROOM LIBERTARIO 2025/1. CORPORATIVOS-CORPORATE/1.3 MEXICO/ESPAÑOL/
+   Razón: Capitalización socio local
+
+10. MEXICO - ACUERDO DE ACCIONISTAS LIBERTARIO MEXICO.txt
+    Ubicación PDF: DATA ROOM LIBERTARIO 2025/1. CORPORATIVOS-CORPORATE/1.3 MEXICO/ESPAÑOL/
+    Razón: SHA México en español (ya tenemos versión inglés)
+
+11. MEXICO - TRANSFERENCIA DE LA SOCIEDAD Esc.48,529.txt
+    Ubicación PDF: DATA ROOM LIBERTARIO 2025/1. CORPORATIVOS-CORPORATE/1.3 MEXICO/ESPAÑOL/
+    Razón: Escritura de transferencia
+
+12. MEXICO - Estatutos de Creación Esc.47,543.txt
+    Ubicación PDF: DATA ROOM LIBERTARIO 2025/1. CORPORATIVOS-CORPORATE/1.3 MEXICO/ESPAÑOL/
+    Razón: Estatutos de creación
+
+### BAJA PRIORIDAD
+13. COSTA RICA - ASIENTOS 1 a 3 LIBERTARIO COFFEE ROASTERS.txt
+    Ubicación PDF: DATA ROOM LIBERTARIO 2025/1. CORPORATIVOS-CORPORATE/1.4 COSTA RICA/ESPAÑOL/
+    Razón: Asientos registrales
+
+14. IP - COLOMBIA - LIBERTARIO TRADEMARK (Resolución Nº 22346).txt
+    Ubicación PDF: DATA ROOM LIBERTARIO 2025/4. PROPIEDAD INTELECTUAL/
+    Razón: Registro marca Colombia
+
+## INFORMACIÓN ADICIONAL REQUERIDA (no en Data Room)
+
+### Cap Tables Actualizados
+- [ ] Cap table Panamá Holding - actualizado a enero 2026
+- [ ] Cap table Colombia - actualizado a enero 2026
+- [ ] Cap table Costa Rica - actualizado a enero 2026
+- [ ] Cap table México - actualizado a enero 2026
+- [ ] Cap table India - actualizado a enero 2026
+- [ ] Cap table Chile - actualizado a enero 2026
+
+### Actas de Asambleas
+- [ ] Actas asamblea holding Panamá 2024-2025
+- [ ] Actas board meetings 2024-2025
+
+### Certificados Vigentes
+- [ ] Certificado existencia Colombia actualizado
+- [ ] Certificado existencia Costa Rica actualizado
+- [ ] Good Standing Certificate Delaware actualizado
+
+## NOTAS
+
+1. Los archivos marcados como "vacíos" contienen solo 1-2 bytes,
+   indicando que el PDF original era escaneado y no se pudo extraer texto.
+
+2. Para documentos de ALTA PRIORIDAD, se recomienda:
+   - Solicitar versión digital firmada al equipo legal
+   - O usar OCR profesional en el PDF original
+
+3. Documentos de México en español son respaldo - ya tenemos
+   versión traducida al inglés con toda la información.
+
+---
+Generado automáticamente por análisis de Data Room

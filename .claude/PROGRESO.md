@@ -1,6 +1,6 @@
 # Progreso - SERIE A 2026 Libertario
 
-**Ultima actualizacion:** 2026-01-30 (Sesion 5)
+**Ultima actualizacion:** 2026-01-30 (Sesion 6 - Due Diligence Legal)
 **Estado General:** EN CURSO
 
 ## Objetivo Final
@@ -237,6 +237,51 @@ Seguimiento continuo de datos financieros y operativos
 
 ---
 
+## Due Diligence Legal (Sesion 30-01-2026)
+
+### Estructura Corporativa Documentada
+
+| Pais | Entidad | % Holding | Socio Local | Mayoria Calif. |
+|------|---------|-----------|-------------|----------------|
+| Panama | Libertario Corp (HOLDING) | - | Arlen/Cassland/Bagua | 70% |
+| Colombia | Libertario S.A.S. | TBD | TBD | Ley Colombia |
+| Costa Rica | Libertario S.A. | 82-85% | Oshala 15-18% | 70% |
+| Mexico | Libertario SAPI | 75% | Masanamacaya 25% | 76% |
+| USA | Futura LLC | 100% | - | N/A |
+| India | Libertario Pvt | 95%* | Arushi Mehra 5% | Ley India |
+
+*India a nombre de Miguel Villaquiran, no directamente del holding
+
+### Clausulas Serie A Clave
+- **Preemptive rights:** 7-10 dias segun pais
+- **Adhesion:** Nuevos inversionistas firman Adherence Letter al SHA
+- **Tag-along:** 50%+1 en todos los paises
+
+### Documentos Analizados
+- [x] EP 14289 Panama (migracion BVI->Panama)
+- [x] SHA Costa Rica (Oshala)
+- [x] SHA Mexico (Masanamacaya)
+- [x] Operating Agreement USA (Futura LLC)
+- [x] MOA/AOA India
+- [x] Bylaws Colombia
+- [x] Certificado Existencia Colombia
+
+### Documentos Pendientes (Criticos)
+- [ ] SHA Colombia (9.7MB - PDF escaneado)
+- [ ] SHA India (Miguel Villaquiran)
+- [ ] Cap tables actualizados (6 paises)
+
+### Archivos Generados en output/legal/
+1. `estructura_corporativa.json` - Datos estructurados
+2. `resumen_legal_serie_a.md` - Analisis consolidado
+3. `analisis_corporativo_progreso.md` - Detalle por pais
+4. `DOCUMENTOS_PENDIENTES_LEGAL.md` - Lista para equipo legal
+5. `inventario_data_room.md` - Archivos disponibles
+6. `archivos_pendientes.txt` - PDFs escaneados
+7. `sha_analisis.md` - SHA Panama
+
+---
+
 ## Archivos del Proyecto
 
 ```
@@ -259,7 +304,15 @@ SERIE A 2026/
 │   ├── EMAIL_JUNTA_SERIE_A.md
 │   ├── EMAIL_ANA_CRISTINA_EXTENSION_NOTA.md
 │   ├── EMAIL_ANA_CRISTINA_EXTENSION_NOTA.docx
-│   └── PROPUESTA_ROMAN_IRRURE.docx          <- NUEVO
+│   ├── PROPUESTA_ROMAN_IRRURE.docx
+│   └── legal/                               <- NUEVO (Due Diligence)
+│       ├── estructura_corporativa.json
+│       ├── resumen_legal_serie_a.md
+│       ├── analisis_corporativo_progreso.md
+│       ├── DOCUMENTOS_PENDIENTES_LEGAL.md
+│       ├── inventario_data_room.md
+│       ├── archivos_pendientes.txt
+│       └── sha_analisis.md
 └── .claude/
     ├── PROGRESO.md                          <- Este archivo
     └── SESSION_LOG.md
