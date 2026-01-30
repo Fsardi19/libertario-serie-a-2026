@@ -15,22 +15,28 @@ Actualiza .claude/SESSION_LOG.md agregando una nueva entrada con:
 ## PASO 2: Actualizar Progreso
 Actualiza .claude/PROGRESO.md con el estado actual de cada componente.
 
-## PASO 3: Verificacion
-Ejecuta:
-- git status (para ver cambios pendientes)
-- /cost (para mostrar costo de sesion)
+## PASO 3: Sincronizar con GitHub
+Ejecuta los siguientes comandos para guardar en GitHub:
+```bash
+cd "/Users/felipesardi/Desktop/EL GREEN HUB/COFFEE SHOPS/AI STRATEGY/SERIE A 2026"
+git add -A
+git commit -m "Cierre sesion [FECHA] - [RESUMEN BREVE]
 
-## PASO 4: Preguntar sobre Commit
-Si hay cambios, preguntar:
-"Quieres que haga commit de los cambios? Describe brevemente que incluir."
+- [Lista de cambios principales]
+
+Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>"
+git push origin main
+```
+
+## PASO 4: Verificacion
+Confirma que el push fue exitoso mostrando:
+- git status
+- URL del repositorio: https://github.com/Fsardi19/libertario-serie-a-2026
 
 ## PASO 5: Resumen Final
 Mostrar resumen estructurado:
 - Fecha
-- Costo de sesion
 - Lo logrado
 - Lo pendiente
 - Proximos pasos sugeridos
-
-## PASO 6: Guardar Sesion
-Si el trabajo no termino, sugerir: /rename serie-a-junta
+- Confirmacion de sync con GitHub
