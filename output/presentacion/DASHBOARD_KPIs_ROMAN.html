@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KPIs Roman Irrure | Libertario Serie A 2026</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', system-ui, sans-serif;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e8e4de 100%);
+            min-height: 100vh;
+            padding: 40px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 3px solid #182b55;
+        }
+
+        .header h1 {
+            color: #182b55;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .header .subtitle {
+            color: #555;
+            font-size: 1.1rem;
+        }
+
+        .header .badge {
+            display: inline-block;
+            background: #182b55;
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-top: 12px;
+        }
+
+        /* Section Titles */
+        .section-title {
+            color: #182b55;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #e8e4de;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title .icon {
+            width: 35px;
+            height: 35px;
+            background: #182b55;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1rem;
+        }
+
+        /* Hero Cards */
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 35px;
+        }
+
+        .hero-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(24, 43, 85, 0.08);
+        }
+
+        .hero-card.structure {
+            background: linear-gradient(135deg, #182b55 0%, #2d51a1 100%);
+            color: white;
+        }
+
+        .hero-card.value {
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            color: white;
+        }
+
+        .hero-card h3 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .structure-items {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .structure-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .structure-item:last-child {
+            border-bottom: none;
+        }
+
+        .structure-item .label {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        .structure-item .value {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .value-highlight {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .value-highlight .big-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .value-highlight .description {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .roi-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 10px 25px;
+            border-radius: 25px;
+            margin-top: 15px;
+            font-weight: 600;
+        }
+
+        /* KPI Cards Grid */
+        .kpi-section {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 20px rgba(24, 43, 85, 0.08);
+        }
+
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .kpi-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .kpi-card:hover {
+            border-color: #182b55;
+            transform: translateY(-3px);
+        }
+
+        .kpi-card.primary {
+            background: linear-gradient(135deg, #182b55 0%, #2d51a1 100%);
+            color: white;
+        }
+
+        .kpi-card .kpi-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(24, 43, 85, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-size: 1.5rem;
+        }
+
+        .kpi-card.primary .kpi-icon {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .kpi-card .kpi-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .kpi-card.primary .kpi-label {
+            color: rgba(255,255,255,0.8);
+        }
+
+        .kpi-card .kpi-base {
+            font-size: 1.1rem;
+            color: #999;
+            margin-bottom: 5px;
+        }
+
+        .kpi-card.primary .kpi-base {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .kpi-card .kpi-target {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #182b55;
+        }
+
+        .kpi-card.primary .kpi-target {
+            color: white;
+        }
+
+        .kpi-card .kpi-delta {
+            font-size: 0.9rem;
+            color: #27ae60;
+            margin-top: 8px;
+            font-weight: 600;
+        }
+
+        .kpi-card.primary .kpi-delta {
+            color: #90EE90;
+        }
+
+        /* Scenarios Section */
+        .scenarios-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .scenario-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            border: 2px solid #e8e4de;
+            transition: all 0.3s ease;
+        }
+
+        .scenario-card.conservative {
+            border-color: #3498db;
+        }
+
+        .scenario-card.objective {
+            border-color: #27ae60;
+            background: linear-gradient(135deg, rgba(39, 174, 96, 0.1) 0%, rgba(46, 204, 113, 0.1) 100%);
+        }
+
+        .scenario-card.aggressive {
+            border-color: #9b59b6;
+        }
+
+        .scenario-card .scenario-title {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .scenario-card.conservative .scenario-title { color: #3498db; }
+        .scenario-card.objective .scenario-title { color: #27ae60; }
+        .scenario-card.aggressive .scenario-title { color: #9b59b6; }
+
+        .scenario-card .scenario-revenue {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #182b55;
+            margin-bottom: 5px;
+        }
+
+        .scenario-card .scenario-delta {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .scenario-card .scenario-ebitda {
+            background: white;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .scenario-card .scenario-ebitda .label {
+            font-size: 0.75rem;
+            color: #666;
+            text-transform: uppercase;
+        }
+
+        .scenario-card .scenario-ebitda .value {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #27ae60;
+        }
+
+        .scenario-card .scenario-roi {
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .scenario-card.conservative .scenario-roi { color: #3498db; }
+        .scenario-card.objective .scenario-roi { color: #27ae60; }
+        .scenario-card.aggressive .scenario-roi { color: #9b59b6; }
+
+        /* Areas de Contribucion */
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .area-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 25px;
+            border-left: 4px solid #182b55;
+        }
+
+        .area-card.wholesale { border-left-color: #27ae60; }
+        .area-card.expansion { border-left-color: #3498db; }
+        .area-card.serie-a { border-left-color: #9b59b6; }
+        .area-card.governance { border-left-color: #e67e22; }
+
+        .area-card h4 {
+            font-size: 1rem;
+            color: #182b55;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .area-card .area-icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        .area-card.wholesale .area-icon { background: #27ae60; }
+        .area-card.expansion .area-icon { background: #3498db; }
+        .area-card.serie-a .area-icon { background: #9b59b6; }
+        .area-card.governance .area-icon { background: #e67e22; }
+
+        .area-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .area-card li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 0.9rem;
+            color: #555;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .area-card li:last-child {
+            border-bottom: none;
+        }
+
+        .area-card li::before {
+            content: "→";
+            color: #182b55;
+            font-weight: bold;
+        }
+
+        /* Tracking Table */
+        .tracking-section {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 20px rgba(24, 43, 85, 0.08);
+        }
+
+        .tracking-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .tracking-table th {
+            background: #182b55;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .tracking-table th:first-child {
+            border-radius: 8px 0 0 0;
+        }
+
+        .tracking-table th:last-child {
+            border-radius: 0 8px 0 0;
+        }
+
+        .tracking-table td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .tracking-table tr:hover {
+            background: #f8f9fa;
+        }
+
+        .tracking-table .kpi-name {
+            font-weight: 600;
+            color: #182b55;
+        }
+
+        .tracking-table .frequency {
+            background: #e8e4de;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .tracking-table .status {
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .status.pending { background: #fff3cd; color: #856404; }
+        .status.on-track { background: #d4edda; color: #155724; }
+        .status.at-risk { background: #f8d7da; color: #721c24; }
+
+        /* Conclusion Section */
+        .conclusion-section {
+            background: linear-gradient(135deg, #182b55 0%, #2d51a1 100%);
+            border-radius: 16px;
+            padding: 35px;
+            color: white;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .conclusion-section h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .conclusion-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .conclusion-item {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .conclusion-item .label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.8;
+            margin-bottom: 8px;
+        }
+
+        .conclusion-item .value {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .conclusion-message {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+
+        /* Decision Section */
+        .decision-section {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(24, 43, 85, 0.08);
+        }
+
+        .decision-options {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .decision-card {
+            padding: 25px;
+            border-radius: 12px;
+            border: 2px solid #e8e4de;
+            transition: all 0.3s ease;
+        }
+
+        .decision-card:hover {
+            border-color: #182b55;
+        }
+
+        .decision-card.recommended {
+            border-color: #27ae60;
+            background: linear-gradient(135deg, rgba(39, 174, 96, 0.05) 0%, rgba(46, 204, 113, 0.05) 100%);
+        }
+
+        .decision-card .decision-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+
+        .decision-card .decision-number {
+            width: 35px;
+            height: 35px;
+            background: #182b55;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+
+        .decision-card.recommended .decision-number {
+            background: #27ae60;
+        }
+
+        .decision-card .decision-title {
+            font-weight: 700;
+            color: #182b55;
+            font-size: 1.05rem;
+        }
+
+        .decision-card .badge-recommended {
+            background: #27ae60;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin-left: auto;
+        }
+
+        .decision-card p {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 25px;
+            color: #888;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .hero-grid, .areas-grid, .decision-options {
+                grid-template-columns: 1fr;
+            }
+            .kpi-grid, .scenarios-grid, .conclusion-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 20px;
+            }
+            .header h1 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Evaluacion de KPIs - Roman Irrure</h1>
+            <p class="subtitle">Marco de Contribucion Estrategica | NED Libertario Coffee Roasters</p>
+            <span class="badge">Para revision de Junta Directiva</span>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="hero-grid">
+            <div class="hero-card structure">
+                <h3>Estructura Propuesta (Sin In-Kind)</h3>
+                <div class="structure-items">
+                    <div class="structure-item">
+                        <span class="label">Inversion CLA</span>
+                        <span class="value">$125,000 USD</span>
+                    </div>
+                    <div class="structure-item">
+                        <span class="label">Cap / Descuento</span>
+                        <span class="value">$40M / 20%</span>
+                    </div>
+                    <div class="structure-item">
+                        <span class="label">Stock Options</span>
+                        <span class="value">1.125% fully diluted</span>
+                    </div>
+                    <div class="structure-item">
+                        <span class="label">Vesting</span>
+                        <span class="value">36 meses (25% c/tramo)</span>
+                    </div>
+                    <div class="structure-item">
+                        <span class="label">Dedicacion</span>
+                        <span class="value">8-10 hrs/mes</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-card value">
+                <h3>Valor Potencial de Contribucion</h3>
+                <div class="value-highlight">
+                    <div class="big-number">+$279K</div>
+                    <div class="description">Impacto EBITDA anual (escenario objetivo)</div>
+                    <div class="roi-badge">ROI ~1x vs costo de opciones</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- KPIs Principales Wholesale -->
+        <div class="kpi-section">
+            <h3 class="section-title">
+                <span class="icon">$</span>
+                KPIs Principales - Wholesale
+            </h3>
+            <div class="kpi-grid">
+                <div class="kpi-card primary">
+                    <div class="kpi-icon">📈</div>
+                    <div class="kpi-label">Revenue Wholesale</div>
+                    <div class="kpi-base">Base: $1.7M</div>
+                    <div class="kpi-target">$2.0 - 2.3M</div>
+                    <div class="kpi-delta">+18% a +35%</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon">🏢</div>
+                    <div class="kpi-label">Cuentas Tier 1+2</div>
+                    <div class="kpi-base">Nuevas</div>
+                    <div class="kpi-target">5 - 8</div>
+                    <div class="kpi-delta">Door-opening</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon">📊</div>
+                    <div class="kpi-label">Margen Bruto</div>
+                    <div class="kpi-base">Base: 35%</div>
+                    <div class="kpi-target">37 - 38%</div>
+                    <div class="kpi-delta">+2-3 pp</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Escenarios de Impacto -->
+        <div class="kpi-section">
+            <h3 class="section-title">
+                <span class="icon">💰</span>
+                Escenarios de Impacto Financiero
+            </h3>
+            <div class="scenarios-grid">
+                <div class="scenario-card conservative">
+                    <div class="scenario-title">Conservador</div>
+                    <div class="scenario-revenue">$2.0M</div>
+                    <div class="scenario-delta">+$300K vs base</div>
+                    <div class="scenario-ebitda">
+                        <div class="label">Impacto EBITDA</div>
+                        <div class="value">+$105K</div>
+                    </div>
+                    <div class="scenario-roi">ROI: 0.35-0.47x</div>
+                </div>
+                <div class="scenario-card objective">
+                    <div class="scenario-title">⭐ Objetivo</div>
+                    <div class="scenario-revenue">$2.3M</div>
+                    <div class="scenario-delta">+$600K vs base</div>
+                    <div class="scenario-ebitda">
+                        <div class="label">Impacto EBITDA</div>
+                        <div class="value">+$279K</div>
+                    </div>
+                    <div class="scenario-roi">ROI: 0.93-1.24x</div>
+                </div>
+                <div class="scenario-card aggressive">
+                    <div class="scenario-title">Agresivo</div>
+                    <div class="scenario-revenue">$2.7M</div>
+                    <div class="scenario-delta">+$1.0M vs base</div>
+                    <div class="scenario-ebitda">
+                        <div class="label">Impacto EBITDA</div>
+                        <div class="value">+$485K</div>
+                    </div>
+                    <div class="scenario-roi">ROI: 1.62-2.16x</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Areas de Contribucion -->
+        <div class="kpi-section">
+            <h3 class="section-title">
+                <span class="icon">🎯</span>
+                Areas de Contribucion Estrategica
+            </h3>
+            <div class="areas-grid">
+                <div class="area-card wholesale">
+                    <h4>
+                        <span class="area-icon">🛒</span>
+                        Wholesale & CPG
+                    </h4>
+                    <ul>
+                        <li>Introductions a cadenas de supermercados</li>
+                        <li>Estrategia de entrada a canal moderno</li>
+                        <li>Negociacion de contratos corporativos</li>
+                        <li>Optimizacion de pricing por canal</li>
+                    </ul>
+                </div>
+                <div class="area-card expansion">
+                    <h4>
+                        <span class="area-icon">🌎</span>
+                        Expansion Internacional
+                    </h4>
+                    <ul>
+                        <li>Apoyo mercados rezagados (MX, Costa Rica)</li>
+                        <li>Evaluacion nuevos mercados (Peru)</li>
+                        <li>Red de contactos LATAM</li>
+                        <li>Estrategia de entrada por pais</li>
+                    </ul>
+                </div>
+                <div class="area-card serie-a">
+                    <h4>
+                        <span class="area-icon">💼</span>
+                        Serie A
+                    </h4>
+                    <ul>
+                        <li>Introductions a fondos/family offices</li>
+                        <li>Participacion en pitch meetings</li>
+                        <li>Apoyo en due diligence</li>
+                        <li>Credibilidad como miembro de Junta</li>
+                    </ul>
+                </div>
+                <div class="area-card governance">
+                    <h4>
+                        <span class="area-icon">⚖️</span>
+                        Governance
+                    </h4>
+                    <ul>
+                        <li>Disciplina operativa (sin dia a dia)</li>
+                        <li>Definicion prioridades estrategicas</li>
+                        <li>Seguimiento KPIs de compania</li>
+                        <li>Preparacion para governance Serie A</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tracking -->
+        <div class="tracking-section">
+            <h3 class="section-title">
+                <span class="icon">📋</span>
+                Marco de Seguimiento Propuesto
+            </h3>
+            <table class="tracking-table">
+                <thead>
+                    <tr>
+                        <th>KPI</th>
+                        <th>Meta Q2 2026</th>
+                        <th>Meta Q4 2026</th>
+                        <th>Meta 2026</th>
+                        <th>Frecuencia</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="kpi-name">Revenue Wholesale</td>
+                        <td>$450K</td>
+                        <td>$650K</td>
+                        <td><strong>$2.0-2.3M</strong></td>
+                        <td><span class="frequency">Trimestral</span></td>
+                        <td><span class="status pending">Pendiente</span></td>
+                    </tr>
+                    <tr>
+                        <td class="kpi-name">Cuentas Tier 1+2 nuevas</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td><strong>5-8</strong></td>
+                        <td><span class="frequency">Trimestral</span></td>
+                        <td><span class="status pending">Pendiente</span></td>
+                    </tr>
+                    <tr>
+                        <td class="kpi-name">Margen bruto wholesale</td>
+                        <td>36%</td>
+                        <td>38%</td>
+                        <td><strong>37%+</strong></td>
+                        <td><span class="frequency">Trimestral</span></td>
+                        <td><span class="status pending">Pendiente</span></td>
+                    </tr>
+                    <tr>
+                        <td class="kpi-name">Introductions realizadas</td>
+                        <td>5-7</td>
+                        <td>5-8</td>
+                        <td><strong>10-15</strong></td>
+                        <td><span class="frequency">Semestral</span></td>
+                        <td><span class="status pending">Pendiente</span></td>
+                    </tr>
+                    <tr>
+                        <td class="kpi-name">Pipeline wholesale valor</td>
+                        <td>$500K</td>
+                        <td>$750K</td>
+                        <td><strong>$750K+</strong></td>
+                        <td><span class="frequency">Semestral</span></td>
+                        <td><span class="status pending">Pendiente</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="margin-top: 20px; color: #666; font-size: 0.9rem;">
+                <strong>Nota:</strong> Estos KPIs son para seguimiento y evaluacion de impacto.
+                <strong>No estan atados a compensacion adicional</strong> - la compensacion de Roman es la estructura
+                estandar de opciones, identica a otros miembros de Junta.
+            </p>
+        </div>
+
+        <!-- Conclusion -->
+        <div class="conclusion-section">
+            <h3>Resumen de Valoracion</h3>
+            <div class="conclusion-grid">
+                <div class="conclusion-item">
+                    <div class="label">Costo Opciones (anualizado)</div>
+                    <div class="value">$225-300K</div>
+                </div>
+                <div class="conclusion-item">
+                    <div class="label">Impacto EBITDA Objetivo</div>
+                    <div class="value">+$279K</div>
+                </div>
+                <div class="conclusion-item">
+                    <div class="label">ROI Estimado</div>
+                    <div class="value">~1x</div>
+                </div>
+            </div>
+            <p class="conclusion-message">
+                En el escenario objetivo, Roman se "paga" sus opciones <strong>solo con wholesale</strong>.
+                Cualquier contribucion adicional en <strong>Serie A, expansion o governance</strong>
+                representa valor incremental para Libertario sin costo adicional.
+            </p>
+        </div>
+
+        <!-- Decision -->
+        <div class="decision-section">
+            <h3 class="section-title">
+                <span class="icon">✓</span>
+                Decision Requerida de Junta
+            </h3>
+            <div class="decision-options">
+                <div class="decision-card recommended">
+                    <div class="decision-header">
+                        <span class="decision-number">A</span>
+                        <span class="decision-title">Aprobar Estructura Simplificada</span>
+                        <span class="badge-recommended">Recomendado</span>
+                    </div>
+                    <p>
+                        Aceptar inversion de $125K CLA + opciones 1.125% con vesting estandar.
+                        Sin componente in-kind. KPIs como marco de seguimiento, no atados a compensacion.
+                        Consistente con otros miembros de Junta.
+                    </p>
+                </div>
+                <div class="decision-card">
+                    <div class="decision-header">
+                        <span class="decision-number">B</span>
+                        <span class="decision-title">Negociar Terminos Adicionales</span>
+                    </div>
+                    <p>
+                        Si Roman no acepta estructura simplificada: evaluar aceleracion de vesting
+                        por sobre-cumplimiento de wholesale ($2.5M+) o mejora en terminos del CLA
+                        (cap menor o mayor descuento).
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <strong>Libertario Coffee Roasters</strong> | Serie A 2026 | Preparado para Junta Directiva | 30 de enero de 2026
+        </div>
+    </div>
+</body>
+</html>

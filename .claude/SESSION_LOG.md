@@ -1,0 +1,463 @@
+# Session Log - SERIE A 2026
+
+## Instrucciones
+Este archivo documenta el historial de sesiones de trabajo.
+Claude Code lo lee al inicio para tener contexto.
+Claude Code lo actualiza al cierre con /project:close.
+
+---
+
+## Sesion: 2026-01-28 - Setup Inicial y FASE 1-2
+
+### Objetivo
+Setup inicial del proyecto, exploracion de documentos, y planificacion del informe para Junta Directiva.
+
+### Completado
+
+**FASE 1 - DISCOVER:**
+- Exploracion completa de todos los archivos fuente
+- Extraccion de datos de RTFs (Roman Irrure, One To One Bank)
+- Extraccion de datos de Excel (Blue Tokai, Third Wave, Embudo)
+- Extraccion de PDFs (Multiplos, Comparables, Watch House, Investment Deck)
+- Investigacion online de multiplos Blue Tokai y Third Wave con fuentes verificadas
+- Creacion de inventario detallado de archivos
+
+**FASE 2 - PLAN:**
+- Definicion de estructura de 12 slides para informe Junta
+- Ajuste de timeline a Q1 2027 (dinero en cuenta)
+- Analisis de valoracion basado en Revenue 2026 (~$16M)
+- Rango de valoracion recomendado: $64-99M pre-money (4-6x)
+
+**SETUP:**
+- Creacion de CLAUDE.md con reglas del proyecto
+- Creacion de comandos /project:start y /project:close
+- Creacion de SESSION_LOG.md y PROGRESO.md
+- Estructura de carpetas output/
+
+### Archivos Creados
+| Archivo | Descripcion |
+|---------|-------------|
+| CLAUDE.md | Reglas y contexto del proyecto |
+| .claude/commands/start.md | Protocolo de apertura |
+| .claude/commands/close.md | Protocolo de cierre |
+| .claude/SESSION_LOG.md | Este archivo |
+| .claude/PROGRESO.md | Estado del trabajo |
+| output/ (estructura) | Carpetas para deliverables |
+
+### Datos Clave Extraidos
+
+**Roman Irrure:**
+- NED role con 1.125% opciones @ $10M pre-money
+- Vesting 36 meses (25% a 6,12,24,36 meses)
+- CLA $125K @ $40M cap, 20% descuento, 6% interes, 24 meses
+- Estado: Acepto logica general, pendiente llamada para cerrar
+
+**ONEtoONE:**
+- Mandato propuesto: $15M Serie A + exit advisory post-2028
+- Estrategia India separada sugerida
+- Preocupaciones Junta: fees, track record fundraising vs M&A
+
+**Valoracion:**
+- Blue Tokai Serie C: $180M @ 6.9x FY24 revenue (3.8x run-rate)
+- Third Wave Serie C: $155M @ 8.9x FY23 revenue (4.3x run-rate)
+- Libertario target: $75-90M pre-money (4.5-5.5x sobre $16M 2026)
+
+### Pendiente
+- FASE 3: Redactar el informe final (12 slides)
+- FASE 4: Verificar y entregar
+- Actualizar embudo con datos finales (usuario proporcionara)
+
+### Proxima Sesion
+1. Ejecutar /project:start
+2. Confirmar estructura de 12 slides
+3. Comenzar FASE 3: Redaccion del informe
+
+---
+
+## Sesion: 2026-01-28 - FASE 3-4 Completadas - ENTREGA FINAL
+
+### Objetivo
+Completar el informe para Junta Directiva, generar PDF profesional y entregar.
+
+### Completado
+
+**FASE 3 - IMPLEMENT:**
+- Redaccion completa del informe de 12 slides
+- Version Markdown: INFORME_JUNTA_SERIE_A_2026.md
+- Version HTML v1 y v2 con correcciones del usuario
+- Datos estructurados: datos_informe_junta.json
+
+**Correcciones incorporadas:**
+- Datos reales 2025: 18 tiendas (no 24), EBITDA -$800K
+- EBITDA 2026: $760K, Breakeven Julio 2026
+- $5M comprometidos (Marzo 2026) + $500K sobre-suscripcion (Q3 2026)
+- Nota sobre dilucion de opciones Roman Irrure (1.125% -> ~1%)
+- ONEtoONE requiere decision de Junta
+- Matriz de comparables expandida a 9 empresas
+
+**Comparables verificados online:**
+- WatchHouse: £76M valoracion, £14.7M revenue = 5.2x (Mark Bezos/HighPost Capital)
+- GoodNews Coffee: €15M+ funding, Barcelona/Madrid/Paris
+- Blue Tokai, Third Wave, La Colombe, Blue Bottle, Blank Street, Proud Mary, Subko
+
+**FASE 4 - VERIFY:**
+- Revision con usuario de todos los datos
+- Ajustes de colores a marca Libertario (#182b55 navy, #e8e4de beige)
+- Generacion de PDF profesional con Chrome headless
+- Eliminacion de pie de pagina del navegador
+- Imagen real de latte art embebida en base64
+- Entrega final aprobada por usuario
+
+### Archivos Creados/Modificados
+
+| Archivo | Accion |
+|---------|--------|
+| output/presentacion/INFORME_JUNTA_SERIE_A_2026.pdf | CREADO - Entregable final |
+| output/presentacion/INFORME_JUNTA_SERIE_A_2026_v2.html | CREADO - HTML con correcciones |
+| output/presentacion/INFORME_JUNTA_SERIE_A_2026_PDF.html | CREADO - HTML para PDF |
+| output/presentacion/INFORME_JUNTA_SERIE_A_2026.md | CREADO - Version Markdown |
+| output/datos/datos_informe_junta.json | CREADO - Datos estructurados |
+| .claude/PROGRESO.md | ACTUALIZADO - Estado COMPLETADO |
+
+### Especificaciones Tecnicas PDF
+
+- Colores Libertario: Navy #182b55, Beige #e8e4de
+- Fuente: Montserrat (Google Fonts)
+- Imagen latte art embebida en base64 (sin URLs externas)
+- Sin header/footer del navegador (--no-pdf-header-footer)
+- 12 slides con page breaks
+
+### Estado Final
+
+**PROYECTO COMPLETADO**
+
+Entregables listos para presentacion a Junta Directiva.
+
+---
+
+## Sesion: 2026-01-28 - Dashboard Embudo Inversionistas
+
+### Objetivo
+Crear dashboard interactivo del embudo de inversionistas para Serie A 2026.
+
+### Completado
+
+**Dashboard Embudo de Inversionistas:**
+- Creacion de dashboard HTML interactivo profesional
+- Simplificacion de categorias por solicitud del usuario:
+  - "Cerrado/Comprometido" = Convertidos + Firma + Aceptacion ($4.20M, 15 inv)
+  - "Pipeline Activo" = Posibles + Deck Enviado ($2.13M, 7 inv)
+- Visualizacion de 127% de meta ($6.33M de $5M)
+- Embudo visual SVG con proporciones correctas
+- Tabla interactiva con filtros por categoria
+- Colores marca Libertario (#182b55, #e8e4de)
+
+**Email para Junta:**
+- Creacion de email breve con link DocSend
+- URL: https://docsend.com/view/5txqfx59iv2afsxy
+- Clave: Libertario2026
+
+### Archivos Creados/Modificados
+
+| Archivo | Accion |
+|---------|--------|
+| output/presentacion/DASHBOARD_EMBUDO_INVERSIONISTAS.html | CREADO |
+| output/EMAIL_JUNTA_SERIE_A.md | CREADO |
+
+### Datos del Embudo
+
+| Categoria | Monto | Inversionistas |
+|-----------|-------|----------------|
+| Cerrado/Comprometido | $4.20M | 15 |
+| Pipeline Activo | $2.13M | 7 |
+| Descartados | - | 29 |
+| **Total Contactados** | - | **51** |
+
+### Pendiente
+- Ninguno - Proyecto completado
+
+### Proxima Sesion
+- Proyecto Serie A 2026 COMPLETADO
+- Todos los entregables listos para Junta Directiva
+
+---
+
+## Sesion: 2026-01-30 - Actualizacion Comite Directivo
+
+### Objetivo
+Incorporar datos actualizados del Comite Directivo 30-01-2026 y revisar negociacion Roman Irrure.
+
+### Completado
+
+**Lectura Comite Directivo 30-01-2026:**
+- Ventas 2025 cierre real: $7.22M (101% del plan)
+- Proyeccion ventas 2026: $16.7M (+132%)
+- EBITDA 2025: -$0.8M -> EBITDA 2026: +$0.7M
+- Tiendas: 18 (2025) -> 38 (2026 plan)
+- 19 operativas enero 2026 + 6 en construccion
+- Break-even proyectado: Julio 2026
+
+**Necesidad de Capital Actualizada:**
+- Asegurado: $1.9M (ronda) + $0.3M (socios minoritarios) = $2.2M
+- Gap a cubrir: $1.4M
+- Total necesidad: $3.3M
+
+**Alternativas para Gap $1.4M:**
+- Mifel Mexico (bancario): $0.40M
+- India (prestamos): $0.25M
+- Colombia (leasing): $0.25M
+- Extension ronda: $0.50M
+
+**Revision Negociacion Roman Irrure:**
+- Busqueda completa de datos sobre KPIs de impacto
+- Roman propone: $125K cash + $125K in-kind (contribucion estrategica)
+- Libertario propone: estructura sin KPIs (NED estandar)
+- Pendiente: Roman entrega propuesta KPIs tras recibir plan wholesale
+
+**Cambios vs Plan Identificados:**
+- Ventas por tienda: OK
+- Margen operativo: OK
+- Maduracion tiendas: Colombia/India OK, Mexico/Costa Rica rezagados
+- Ritmo aperturas: Retrasado
+- Flujo de caja: Presionado temporalmente
+
+### Archivos Modificados
+
+| Archivo | Accion |
+|---------|--------|
+| .claude/PROGRESO.md | ACTUALIZADO - Datos Comite Directivo |
+| .claude/SESSION_LOG.md | ACTUALIZADO - Nueva sesion |
+
+### Datos Clave Nuevos
+
+**KPIs Modelo Optimizado (Bogota Calle 79):**
+- Ticket promedio: $12
+- Transacciones/dia: 79
+- Ventas/dia: $951
+- Margen bruto: 66.02%
+- Break-even real: Mes 1 (vs presupuesto mes 3)
+
+**Tiendas por Pais Enero 2026:**
+- Colombia: 10 operativas + 3 construccion
+- Mexico: 2 operativas + 1 construccion
+- Costa Rica: 1 operativa + 1 construccion
+- India: 1 operativa + 1 construccion
+- Chile: 1 operativa
+- Estados Unidos: 4 operativas
+- Total: 19 operativas + 6 construccion
+
+### Pendiente
+- Esperar propuesta KPIs de Roman (tras recibir plan wholesale)
+- Seguimiento a alternativas financiamiento gap $1.4M
+
+### Proxima Sesion
+- Revisar propuesta Roman cuando este disponible
+- Seguimiento cierre ronda
+
+---
+
+## Sesion: 2026-01-30 (Continuacion) - KPIs Wholesale y Dashboard
+
+### Objetivo
+Crear KPIs para Roman en Wholesale y actualizar dashboard de inversionistas.
+
+### Completado
+
+**Escenarios Negociacion Roman:**
+- Documento con propuesta simplificada (sin in-kind)
+- Estructura: $125K CLA + 1.125% opciones
+- Identificacion de areas de impacto: Wholesale, Expansion, Serie A
+
+**KPIs Wholesale para Roman:**
+- Revenue wholesale: $1.7M base -> $2.0-2.3M objetivo
+- Cuentas Tier 1+2 nuevas: 5-8 meta
+- Margen bruto: 35% -> 37-38%
+- Valoracion ROI: ~1x solo en wholesale
+
+**Dashboard Embudo Actualizado:**
+- 51 inversionistas totales
+- Cerrado: $4.20M (15 inv) - 84% de meta
+- Pipeline: $1.63M (7 inv) - 33% adicional
+- Total: $5.83M = 117% de meta $5M
+- Nuevos leads Serie A: L Catterton, Creadev, Enlightened Hospitality
+- Roman Irrure en Pipeline como "Posible" $125K
+- Interes futuro: $4.05M (14 inv)
+- Cierre perdido: $3.0M (12 inv)
+
+### Archivos Creados/Modificados
+
+| Archivo | Accion |
+|---------|--------|
+| output/ESCENARIOS_NEGOCIACION_ROMAN.md | CREADO |
+| output/KPIs_WHOLESALE_ROMAN.md | CREADO |
+| output/presentacion/DASHBOARD_EMBUDO_INVERSIONISTAS.html | ACTUALIZADO |
+| output/datos/datos_comite_directivo_20260130.json | CREADO |
+| .claude/PROGRESO.md | ACTUALIZADO |
+| .claude/SESSION_LOG.md | ACTUALIZADO |
+
+### Metricas Clave
+
+**Embudo Inversionistas:**
+- Tasa conversion: 29%
+- Ticket promedio: $280K
+- 3 fondos Serie A en pipeline
+
+**Wholesale KPIs Roman:**
+- Impacto EBITDA objetivo: +$279K/ano
+- ROI vs opciones: ~1x
+
+### Pendiente
+- Esperar propuesta KPIs de Roman
+- Seguimiento cierre pipeline activo ($1.63M)
+- Conversion leads Serie A
+
+---
+
+## Sesion: 2026-01-30 (Continuacion) - Analisis Extension Nota Convertible
+
+### Objetivo
+Analizar el efecto de extender la nota convertible de $5M con $500K adicionales de un nuevo inversionista.
+
+### Completado
+
+**Analisis de Mecanica de Conversion:**
+- Revision completa del Convertible Loan Agreement
+- Validacion de formula de conversion segun el acuerdo
+- Calculo de efecto de dilucion para inversionistas originales
+
+**Terminos Nota Original:**
+- Valuation Cap: $40M pre-money
+- Descuento: 20%
+- Valoracion efectiva: $32M ($40M x 0.80)
+- Post-money: $37M
+- % para holders: 13.51%
+
+**Escenarios Analizados:**
+
+| Escenario | % Original $5M | Efecto |
+|-----------|----------------|--------|
+| Sin extension | 13.51% | Base |
+| Extension mismos terminos ($5.5M) | 13.33% | -0.18pp dilucion |
+| Extension cap $50M (recomendado) | 13.51% | Sin dilucion |
+
+**Recomendacion Final:**
+- Emitir nota SEPARADA con cap $50M para los $500K
+- No modifica documentos existentes
+- Protege completamente a inversionistas originales
+- Justificacion: Clausula Whereas (B) permite terminos economicos diferentes
+
+**Email para Abogada:**
+- Redaccion de correo para Ana Cristina Jaramillo
+- Explicacion de mecanica, escenarios y recomendacion
+- Documento Word formateado profesionalmente
+
+### Archivos Creados/Modificados
+
+| Archivo | Accion |
+|---------|--------|
+| output/datos/CONVERTIBLE_LOAN_AGREEMENT_TEMPLATE.md | CREADO - Texto completo del acuerdo |
+| output/EMAIL_ANA_CRISTINA_EXTENSION_NOTA.md | CREADO - Email en Markdown |
+| output/EMAIL_ANA_CRISTINA_EXTENSION_NOTA.docx | CREADO - Email en Word formateado |
+| .claude/PROGRESO.md | ACTUALIZADO - Seccion nota convertible |
+| .claude/SESSION_LOG.md | ACTUALIZADO - Esta sesion |
+
+### Datos Clave
+
+**Formula de Conversion (del acuerdo):**
+> Conversion Price = (Valuation Cap x (1 - Discount)) / Fully Diluted Capitalization
+
+**Clausula que permite extension con terminos diferentes:**
+> "...except mainly for the economic terms and the date of issuance which may differ."
+
+### Pendiente
+- Respuesta de Ana Cristina Jaramillo sobre interpretacion legal
+- Definir cap final para nueva nota ($50M recomendado)
+- Preparar documentos para nuevo inversionista
+
+---
+
+## Sesion: 2026-01-30 (Continuacion) - Propuesta Roman Irrure
+
+### Objetivo
+Redactar propuesta formal de la Junta Directiva para Roman Irrure.
+
+### Completado
+
+**Propuesta para Roman Irrure:**
+- Documento Word profesional con colores Libertario
+- Estructura de inversion aprobada por Junta
+
+**Terminos Aprobados:**
+
+| Componente | Detalle |
+|------------|---------|
+| Inversion inicial | $125,000 (nota cerrada, terminos originales) |
+| Contribucion in-kind (KPIs) | Hasta $125,000 adicionales |
+| Inversion total potencial | $250,000 |
+| Terminos nota | $40M cap, 20% descuento, 6%, 24 meses |
+| Rol en Junta | Puerta abierta para futuro, sin compromiso actual |
+
+**Puntos Clave Comunicados:**
+- Ventas 2025 excedieron presupuesto ($7.22M, 101%)
+- Beneficio de entrar ahora: cap $40M vs nueva nota a $50M
+- Ticket flexible aceptado ($125K)
+- KPIs permiten generar $125K adicionales in-kind
+- Junta: diplomaticamente se deja puerta abierta sin comprometer
+
+### Archivos Creados
+
+| Archivo | Accion |
+|---------|--------|
+| output/PROPUESTA_ROMAN_IRRURE.docx | CREADO - Propuesta formal Word |
+
+### Pendiente
+- Enviar propuesta a Roman
+- Esperar respuesta
+- Definir KPIs especificos si acepta
+
+### Proxima Sesion
+- Seguimiento respuesta Roman
+- Seguimiento respuesta Ana Cristina (nota convertible)
+
+---
+
+## Sesion: 2026-01-30 (Continuacion) - Correos y Dashboard
+
+### Objetivo
+Redactar comunicaciones para Roman y Juan Emilio, actualizar dashboard de inversionistas.
+
+### Completado
+
+**Correo para Juan Emilio Posada (ONEtoONE):**
+- Solicitud de propuesta formal
+- Pedido de elaborar experiencia en fundraising (vs M&A)
+- Invitacion a Junta: 19 febrero 10AM (20 min)
+
+**Dashboard Embudo Actualizado:**
+- Total: $5.58M (112% de meta) - antes $5.83M
+- Cerrado: $4.20M (14 inv) - Matt Parkhurst movido a Perdido
+- Pipeline: $1.38M (6 inv)
+- Perdido: 13 inv (antes 12)
+- Total contactados: 50
+
+### Cambios en Embudo
+| Inversionista | Cambio |
+|---------------|--------|
+| Matt Parkhurst | Aceptacion -> Cierre Perdido |
+| Juan Emilio Posada | Agregado a Cierre Perdido |
+| Brilia | Renombrado a Santiago Pardo - Brilla (Deck Enviado) |
+
+### Archivos Modificados
+
+| Archivo | Accion |
+|---------|--------|
+| output/presentacion/DASHBOARD_EMBUDO_INVERSIONISTAS.html | ACTUALIZADO |
+| .claude/PROGRESO.md | ACTUALIZADO |
+| .claude/SESSION_LOG.md | ACTUALIZADO |
+
+### Pendiente
+- Enviar correo a Juan Emilio Posada
+- Enviar propuesta a Roman Irrure
+- Seguimiento respuestas
+
+---

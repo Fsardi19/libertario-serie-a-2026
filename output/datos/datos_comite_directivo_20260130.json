@@ -1,0 +1,107 @@
+{
+  "documento": "Comite Directivo",
+  "fecha": "2026-01-30",
+  "fuente": "20260130 - Comite Directivo.pdf",
+
+  "ventas_2025": {
+    "real": 7220000,
+    "deck": 7170000,
+    "cumplimiento_pct": 101,
+    "tiendas": 18,
+    "moneda": "USD"
+  },
+
+  "proyecciones_2026": {
+    "ventas_total": 16700000,
+    "ventas_retail": 15000000,
+    "ventas_wholesale": 1700000,
+    "tiendas_plan": 38,
+    "ebitda_total": 700000,
+    "ebitda_operacion": 2680000,
+    "ga": -1920000,
+    "crecimiento_ventas_pct": 132,
+    "moneda": "USD"
+  },
+
+  "tiendas_enero_2026": {
+    "colombia": {"operativas": 10, "construccion": 3, "plan_2026": 16},
+    "mexico": {"operativas": 2, "construccion": 1, "plan_2026": 6},
+    "costa_rica": {"operativas": 1, "construccion": 1, "plan_2026": 2},
+    "india": {"operativas": 1, "construccion": 1, "plan_2026": 6},
+    "chile": {"operativas": 1, "construccion": 0, "plan_2026": 4},
+    "estados_unidos": {"operativas": 4, "construccion": 0, "plan_2026": 4},
+    "total": {"operativas": 19, "construccion": 6, "plan_2026": 38}
+  },
+
+  "kpis_modelo_optimizado": {
+    "tienda": "Bogota Calle 79",
+    "fecha_apertura": "2025-11-29",
+    "ticket_promedio_usd": 12,
+    "transacciones_diarias": 79,
+    "ventas_diarias_usd": 951,
+    "margen_bruto_pct": 66.02,
+    "ebitda_usd": 369,
+    "breakeven_real_meses": 1,
+    "breakeven_presupuesto_meses": 3
+  },
+
+  "cambios_vs_plan": {
+    "ventas_por_tienda": "en_linea",
+    "margen_operativo": "en_linea",
+    "maduracion_tiendas": {
+      "colombia": "en_linea",
+      "india": "en_linea",
+      "mexico": "rezagado",
+      "costa_rica": "rezagado"
+    },
+    "ritmo_aperturas": "retrasado",
+    "flujo_caja": "presionado_temporalmente",
+    "breakeven_consolidado": "julio_2026"
+  },
+
+  "necesidad_capital": {
+    "asegurado_ronda": 1900000,
+    "asegurado_socios_minoritarios": 300000,
+    "total_asegurado": 2200000,
+    "gap_a_cubrir": 1400000,
+    "total_necesidad": 3300000,
+    "moneda": "USD"
+  },
+
+  "alternativas_gap": {
+    "mifel_mexico_bancario": 400000,
+    "india_prestamos_entrepreneurs": 250000,
+    "colombia_leasing": 250000,
+    "extension_ronda": 500000,
+    "total": 1400000,
+    "moneda": "USD"
+  },
+
+  "flujo_caja_2026": {
+    "periodo_mayor_inversion": "enero_junio_2026",
+    "breakeven": "julio_2026",
+    "ronda_entradas": {
+      "febrero": 900000,
+      "marzo": 690000,
+      "junio": 500000
+    },
+    "socios_minoritarios": {
+      "julio": 307000,
+      "agosto": 307000,
+      "septiembre": 307000
+    }
+  },
+
+  "ebitda_detalle": {
+    "2025": {
+      "ebitda_operacion": 790000,
+      "ga": -1650000,
+      "ebitda_total": -800000
+    },
+    "2026": {
+      "ebitda_operacion": 2680000,
+      "ga": -1920000,
+      "ebitda_total": 700000
+    }
+  }
+}

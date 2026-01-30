@@ -1,0 +1,164 @@
+{
+  "metadata": {
+    "fecha_generacion": "2026-01-28",
+    "proyecto": "Serie A 2026 - Libertario Coffee",
+    "proposito": "Informe para Junta Directiva",
+    "version": "1.0"
+  },
+  "timeline": {
+    "serie_a_target_close": "Q1 2027",
+    "base_valoracion": "Revenue 2026",
+    "proceso_fundraising": "2026"
+  },
+  "negociacion_roman_irrure": {
+    "fuente": "Oferta Roman Irrure.rtfd/TXT.rtf",
+    "cronologia": [
+      {"fecha": "2025-11-20", "evento": "Contacto inicial de Román"},
+      {"fecha": "2025-11-25", "evento": "Respuesta Felipe"},
+      {"fecha": "2025-12-15", "evento": "Envío de contraoferta formal"},
+      {"fecha": "2025-12-16", "evento": "Discusión en Junta"},
+      {"fecha": "2025-12-27", "evento": "Respuesta Román - acepta lógica general"},
+      {"fecha": "2026-01", "evento": "Pendiente llamada para cerrar"}
+    ],
+    "terminos_propuestos": {
+      "rol": "Non-Executive Director (NED)",
+      "stock_options": {
+        "porcentaje": "1.125%",
+        "base": "fully diluted",
+        "precio_ejercicio": "$10M pre-money valuation",
+        "vesting_meses": 36,
+        "schedule": "25% a los 6, 12, 24 y 36 meses"
+      },
+      "cla": {
+        "monto_usd": 125000,
+        "valuation_cap_usd": 40000000,
+        "descuento": "20%",
+        "interes_anual": "6%",
+        "vencimiento_meses": 24
+      }
+    },
+    "estado": "Román aceptó lógica general, pendiente llamada para cerrar"
+  },
+  "propuesta_onetoone": {
+    "fuentes": [
+      "Ono to One Bank .rtfd/TXT.rtf",
+      "ONEtoONE_WhoWeAre_2025-3 (5) 2.pptx",
+      "20251214 Profile draft of Ultimate Wave mandate v3 (1).docx"
+    ],
+    "contacto": {
+      "nombre": "Juan Emilio Posada",
+      "cargo": "Partner",
+      "firma": "ONEtoONE Corporate Finance"
+    },
+    "perfil_firma": {
+      "fundacion": 2004,
+      "especialidad": "M&A advisory middle market",
+      "profesionales": "200+",
+      "ciudades": "70+",
+      "mandatos_completados": "2000+"
+    },
+    "mandato_propuesto": {
+      "fase_1": "Serie A $15M",
+      "fase_2": "Estrategia India (vehículo separado)",
+      "fase_3": "Advisory exit post-2028"
+    },
+    "preocupaciones_junta": [
+      "Track record en fundraising vs M&A",
+      "Estructura de fees no definida",
+      "Enfoque histórico más en M&A"
+    ],
+    "recomendacion": "Esperar propuesta formal para análisis sin compromiso"
+  },
+  "analisis_valoracion": {
+    "fuentes": [
+      "Análisis de múltiplos de valoración en startups de café de especialidad.pdf",
+      "Blue Tokai.xlsx",
+      "Third Wave Coffee.xlsx",
+      "Inc42.com",
+      "Entrackr.com",
+      "Tracxn.com"
+    ],
+    "comparables": {
+      "blue_tokai": {
+        "serie_c_fecha": "2024-08",
+        "serie_c_monto_usd": 35000000,
+        "valoracion_usd": 180000000,
+        "revenue_fy24_usd": 26000000,
+        "run_rate_usd": 48000000,
+        "multiplo_fy24": 6.9,
+        "multiplo_run_rate": 3.8,
+        "ebitda_margin": "-22%",
+        "tiendas": 130,
+        "paises": 1
+      },
+      "third_wave": {
+        "serie_c_fecha": "2023-09",
+        "serie_c_monto_usd": 35000000,
+        "valoracion_usd": 155000000,
+        "revenue_fy23_usd": 17500000,
+        "run_rate_usd": 36000000,
+        "multiplo_fy23": 8.9,
+        "multiplo_run_rate": 4.3,
+        "ebitda_margin": "-36%",
+        "tiendas": 80,
+        "paises": 1
+      }
+    },
+    "libertario": {
+      "revenue_2025_usd": 7000000,
+      "revenue_2026_proyectado_usd": 16000000,
+      "tiendas_2025": 24,
+      "tiendas_2026_proyectado": 38,
+      "paises": 6,
+      "ebitda_margin_tienda": "+25%",
+      "gross_margin": "63%",
+      "payback_anos": 1.3,
+      "breakeven_consolidado": "Q1 2026"
+    },
+    "escenarios_valoracion": {
+      "conservador": {
+        "revenue_base_usd": 16000000,
+        "multiplo": 3.5,
+        "valoracion_pre_money_usd": 56000000,
+        "dilucion_con_15m": "21.1%"
+      },
+      "base": {
+        "revenue_base_usd": 16000000,
+        "multiplo": 4.0,
+        "valoracion_pre_money_usd": 64000000,
+        "dilucion_con_15m": "19.0%"
+      },
+      "optimista": {
+        "revenue_base_usd": 16000000,
+        "multiplo": 5.0,
+        "valoracion_pre_money_usd": 80000000,
+        "dilucion_con_15m": "15.8%"
+      }
+    },
+    "rango_recomendado": {
+      "minimo_usd": 56000000,
+      "target_usd": 64000000,
+      "maximo_usd": 80000000,
+      "multiplo_rango": "3.5x - 5.0x"
+    }
+  },
+  "decisiones_requeridas": [
+    {
+      "tema": "Términos Román Irrure",
+      "recomendacion": "Aprobar",
+      "accion": "Votación de Junta"
+    },
+    {
+      "tema": "Propuesta ONEtoONE",
+      "recomendacion": "Esperar propuesta formal",
+      "accion": "Ninguna por ahora"
+    }
+  ],
+  "proximos_pasos": [
+    {"periodo": "Q1 2026", "actividad": "Cerrar NED Román Irrure"},
+    {"periodo": "Q1 2026", "actividad": "Recibir propuesta ONEtoONE"},
+    {"periodo": "Q2-Q3 2026", "actividad": "Proceso fundraising activo"},
+    {"periodo": "Q4 2026", "actividad": "Negociación final con leads"},
+    {"periodo": "Q1 2027", "actividad": "Cierre Serie A"}
+  ]
+}
