@@ -10,13 +10,15 @@
 
 ```
 LIBERTARIO COFFEE ROASTERS CORP (Panamá - Holding)
-├── Libertario Coffee Roasters S.A.S. (Colombia) ~82-85%
+├── Libertario Coffee Roasters S.A.S. (Colombia) 100% ← CONFIRMADO
 ├── Libertario Coffee Roasters S.A. (Costa Rica) 82-85%
 ├── Libertario Coffee Roasters S.A.P.I. de C.V. (México) 75%
 ├── Futura Coffee Roasters LLC (Delaware, USA) 100%
 ├── Libertario Coffee Roasters Pvt Ltd (India) 95%
 └── Libertario Coffee Roasters SpA (Chile) %TBD
 ```
+
+**Nota:** Colombia 100% confirmado por Ana María Peláez (30-01-2026). No existe SHA Colombia.
 
 ---
 

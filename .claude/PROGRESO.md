@@ -244,13 +244,14 @@ Seguimiento continuo de datos financieros y operativos
 | Pais | Entidad | % Holding | Socio Local | Mayoria Calif. |
 |------|---------|-----------|-------------|----------------|
 | Panama | Libertario Corp (HOLDING) | - | Arlen/Cassland/Bagua | 70% |
-| Colombia | Libertario S.A.S. | TBD | TBD | Ley Colombia |
+| **Colombia** | **Libertario S.A.S.** | **100%** | **Ninguno** | Ley Colombia |
 | Costa Rica | Libertario S.A. | 82-85% | Oshala 15-18% | 70% |
 | Mexico | Libertario SAPI | 75% | Masanamacaya 25% | 76% |
 | USA | Futura LLC | 100% | - | N/A |
 | India | Libertario Pvt | 95%* | Arushi Mehra 5% | Ley India |
 
 *India a nombre de Miguel Villaquiran, no directamente del holding
+**Colombia 100% confirmado por Ana Maria Pelaez (30-01-2026) - NO EXISTE SHA
 
 ### Clausulas Serie A Clave
 - **Preemptive rights:** 7-10 dias segun pais
@@ -266,10 +267,10 @@ Seguimiento continuo de datos financieros y operativos
 - [x] Bylaws Colombia
 - [x] Certificado Existencia Colombia
 
-### Documentos Pendientes (Criticos)
-- [ ] SHA Colombia (9.7MB - PDF escaneado)
-- [ ] SHA India (Miguel Villaquiran)
-- [ ] Cap tables actualizados (6 paises)
+### Documentos Pendientes
+- [x] ~~SHA Colombia~~ - NO EXISTE (confirmado Ana Maria Pelaez 30-01-2026)
+- [ ] SHA India (Miguel Villaquiran) - Por confirmar si existe
+- [ ] Cap tables actualizados (pendiente aporte en especie Colombia mid-Feb)
 
 ### Archivos Generados en output/legal/
 1. `estructura_corporativa.json` - Datos estructurados

@@ -51,7 +51,8 @@
         "acciones_clase_a": 4626716,
         "valor_nominal_a": "COP 1,000",
         "acciones_clase_b": 900000,
-        "valor_nominal_b": "COP 223"
+        "valor_nominal_b": "COP 223",
+        "nota": "Pendiente ajuste por aporte en especie (mid-Feb 2026)"
       },
       "representantes_legales": {
         "principal": {"nombre": "Miguel Angel Hernandez Ladino", "cc": "1031153013"},
@@ -65,8 +66,10 @@
         "operaciones_bancarias": "DOS FIRMAS (Principal + 2do Suplente)"
       },
       "tiendas_bogota": ["Calle 122", "Calle 85", "Bodega", "Calle 122 (nueva)", "Calle 82", "Calle 93", "Calle 109"],
-      "participacion_holding": "TBD - SHA pendiente (9.7MB escaneado)",
-      "notas": "Bylaws y Certificado analizados. SHA Colombia (9.7MB) pendiente - muy grande"
+      "participacion_holding": "100%",
+      "sha": "NO APLICA - Libertario Corp es único accionista",
+      "gobierno": "Solo estatutos (bylaws) - ya analizados",
+      "notas": "Confirmado por Ana María Peláez (30-01-2026): No existe SHA Colombia"
     },
     "costa_rica": {
       "nombre": "Libertario Coffee Roasters S.A.",

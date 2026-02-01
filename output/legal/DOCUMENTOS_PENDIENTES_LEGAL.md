@@ -1,59 +1,73 @@
 # DOCUMENTOS PENDIENTES PARA DUE DILIGENCE
 
-## CRITICOS (Bloquean cierre de Serie A)
+**Actualizado:** 2026-01-30 (con respuesta Ana María Peláez)
 
-### 1. SHA Colombia - Version Digital
-- **Archivo actual:** SHA Colombia (9.7MB) - PDF escaneado ilegible
-- **Necesitamos:** Version Word/PDF digital firmado
-- **Contenido esperado:** Clausulas de mayorias, preemptive, tag/drag-along
-- **Responsable:** Equipo legal Colombia
+---
 
-### 2. First Amendment SHA Colombia - Version Digital
-- **Archivo actual:** 1.9MB - PDF escaneado
-- **Necesitamos:** Version digital para comparar con SHA original
+## RESUELTO - Colombia
 
-### 3. SHA India (Miguel Villaquiran) - Version Digital
-- **Si existe:** Solicitar copia firmada
+~~SHA Colombia~~ - **NO EXISTE**
+- Confirmado por Ana María Peláez (30-01-2026)
+- Libertario Corp es único accionista (100%)
+- Solo aplican estatutos (bylaws) - YA ANALIZADOS
+
+---
+
+## PENDIENTE - Alta Prioridad
+
+### 1. SHA India (Miguel Villaquirán)
+- **Pregunta:** ¿Existe acuerdo de accionistas para India?
+- **Si existe:** Solicitar copia digital
 - **Si no existe:** Confirmar que MOA/AOA son suficientes
+- **Archivo en Data Room:** Escaneado ilegible
 
-### 4. Cap Tables Actualizados
+### 2. Cap Tables Actualizados
 Necesitamos cap table a fecha actual de:
-- [ ] Panama (Holding)
-- [ ] Colombia S.A.S.
+- [ ] Colombia S.A.S. (pendiente ajuste aporte en especie - mid-Feb)
 - [ ] Costa Rica S.A.
 - [ ] Mexico S.A.P.I. de C.V.
-- [ ] USA (Futura LLC)
 - [ ] India Pvt Ltd
 - [ ] Chile SpA
 
+**Nota Colombia:** Ana María indica que cap table no está ajustado con aporte en especie. Aumento de capital cotizado en USD 15,000, depósito Arifa USD 11,000 pendiente para mid-Feb.
+
 ---
 
-## MEDIA PRIORIDAD
+## PENDIENTE - Media Prioridad
 
-### 5. Chile - Documentos Corporativos
-- Constitucion de sociedad
+### 3. Chile - Documentos Corporativos
+- Constitución de sociedad
 - Participaciones actuales
 - SHA si existe
 
-### 6. Certificados de Directores Vigentes
-- Panama (Holding)
-- Cada subsidiaria
+---
+
+## INFORMACION COMPLETA (No solicitar)
+
+| País | Documentos | % Holding | Estado |
+|------|------------|-----------|--------|
+| Panamá | EP 14289, SHA Holding | HOLDING | COMPLETO |
+| Colombia | Bylaws, Certificado | **100%** | COMPLETO |
+| Costa Rica | SHA (Oshala), Bylaws | 82-85% | COMPLETO |
+| México | SHA (Masanamacaya), Bylaws | 75% | COMPLETO |
+| USA | Operating Agreement | 100% | COMPLETO |
+| India | MOA, AOA | 95%* | Falta SHA |
+
+*India a nombre de Miguel Villaquirán
 
 ---
 
-## INFORMACION YA DISPONIBLE (No solicitar)
+## RESUMEN EJECUTIVO
 
-| Pais | Documentos Analizados |
-|------|----------------------|
-| Panama | EP 14289 (migracion), SHA Holding |
-| Costa Rica | SHA completo, Bylaws, Certificado |
-| Mexico | SHA completo, Bylaws, Cap table parcial |
-| USA | Operating Agreement Futura LLC |
-| India | MOA, AOA |
-| Colombia | Bylaws, Certificado Existencia (ene 2025) |
+| Categoría | Antes | Ahora |
+|-----------|-------|-------|
+| Documentos críticos pendientes | 3 | 1 |
+| SHA Colombia | Pendiente | NO EXISTE |
+| SHA India | Pendiente | Por confirmar |
+| Cap tables | Pendientes | Solicitados |
 
 ---
 
 **Fecha:** 2026-01-30
-**Generado por:** Analisis Data Room con Claude Code
-**Contacto:** Coordinar con Felipe Sardi para seguimiento
+**Actualizado por:** Respuesta Ana María Peláez
+**Siguiente paso:** Confirmar SHA India y recibir cap tables

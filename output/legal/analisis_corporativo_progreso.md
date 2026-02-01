@@ -222,12 +222,14 @@
 | País | Entidad | % Holding | Socio Local | Mayoría | Lock-up |
 |------|---------|-----------|-------------|---------|---------|
 | Panamá | Libertario Corp | HOLDING | Arlen/Cassland/Bagua | 70% | N/A |
+| **Colombia** | **Libertario S.A.S.** | **100%** | **Ninguno** | Ley Col | N/A |
 | Costa Rica | Libertario S.A. | 82-85% | Oshala 15-18% | 70% | Hasta Mar 2025 |
 | México | Libertario SAPI | 75% | Masanamacaya 25% | **76%** | Venció Ago 2024 |
 | USA | Futura LLC | 100% | Ninguno | N/A | N/A |
 | India | Libertario Pvt | 95%* | Arushi Mehra 5% | Ley India | TBD |
 
 *Nota: India está a nombre de Miguel Villaquirán (95%), no directamente del holding.
+**Colombia confirmado 100% por Ana María Peláez (30-01-2026)
 
 ---
 
@@ -267,20 +269,21 @@
 ### Tiendas en Bogotá (7)
 Calle 122, Calle 85, Bodega, Calle 122 (nueva), Calle 82, Calle 93, Calle 109
 
-### Nota Importante
-- **SHA Colombia (9.7MB) aún pendiente** - Documento escaneado muy grande
-- Bylaws/Certificado NO reemplazan SHA para conocer participaciones
+### Nota Importante - ACTUALIZADO 30-01-2026
+- **NO EXISTE SHA COLOMBIA** - Confirmado por Ana María Peláez
+- **Libertario Corp es único accionista (100%)**
+- Solo aplican los estatutos (bylaws) - YA ANALIZADOS
+- Cap table pendiente ajuste por aporte en especie (mid-Feb 2026)
 
 ---
 
 ## DOCUMENTOS PENDIENTES DE ANÁLISIS
 
 ### Alta Prioridad
-- [ ] **SHA Colombia (9.7MB)** - PDF escaneado, muy grande
-- [ ] **SHA India** con Miguel Villaquirán - PDF escaneado
-- [ ] First Amendment SHA Colombia (1.9MB)
+- [ ] **SHA India** con Miguel Villaquirán - Confirmar si existe
 
 ### Media Prioridad
+- [ ] Cap tables actualizados (Costa Rica, México, India, Chile)
 - [ ] Chile - Constitución y participaciones
 
 ### Completados
@@ -291,7 +294,12 @@ Calle 122, Calle 85, Bodega, Calle 122 (nueva), Calle 82, Calle 93, Calle 109
 - [x] MOA/AOA India
 - [x] Bylaws Colombia
 - [x] Certificado Existencia Colombia
+- [x] **Colombia - NO REQUIERE SHA** (100% Libertario Corp)
+
+### Descartados
+- ~~SHA Colombia~~ - No existe, Libertario Corp es único accionista
+- ~~First Amendment SHA Colombia~~ - No aplica
 
 ---
 
-**Última actualización:** 2026-01-30
+**Última actualización:** 2026-01-30 (actualizado con info Ana María Peláez)
