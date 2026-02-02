@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libertario Coffee - Pipeline de Tiendas Febrero 2026</title>
+    <style>
+        :root {
+            --libertario-blue: #182b55;
+            --libertario-gold: #c9a227;
+            --libertario-cream: #f5f1eb;
+            --libertario-light-blue: #2a4a8a;
+            --success-green: #28a745;
+            --warning-orange: #fd7e14;
+            --danger-red: #dc3545;
+            --colombia: #FFD700;
+            --mexico: #006847;
+            --costarica: #002b7f;
+            --india: #FF9933;
+            --chile: #D52B1E;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+            color: var(--libertario-blue);
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--libertario-blue) 0%, var(--libertario-light-blue) 100%);
+            color: white;
+            padding: 40px 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 400px;
+            height: 400px;
+            background: var(--libertario-gold);
+            opacity: 0.1;
+            border-radius: 50%;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-section h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+        }
+
+        .logo-section h1 span { color: var(--libertario-gold); font-weight: 600; }
+        .logo-section .subtitle { font-size: 1.1rem; opacity: 0.9; margin-top: 8px; }
+
+        .header-info { text-align: right; }
+        .header-info .date { font-size: 0.9rem; opacity: 0.8; }
+        .header-info .doc-type { font-size: 1.1rem; color: var(--libertario-gold); font-weight: 600; margin-top: 5px; }
+
+        .container { max-width: 1400px; margin: 0 auto; padding: 40px; }
+
+        /* Summary Cards */
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .summary-card {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 4px 20px rgba(24, 43, 85, 0.08);
+            border-left: 5px solid var(--libertario-gold);
+        }
+
+        .summary-card .label { font-size: 0.85rem; color: #666; text-transform: uppercase; letter-spacing: 1px; }
+        .summary-card .value { font-size: 2.2rem; font-weight: 700; color: var(--libertario-blue); margin: 8px 0; }
+        .summary-card .sublabel { font-size: 0.8rem; color: #888; }
+        .summary-card.highlight { background: var(--libertario-blue); }
+        .summary-card.highlight .label, .summary-card.highlight .sublabel { color: rgba(255,255,255,0.7); }
+        .summary-card.highlight .value { color: var(--libertario-gold); }
+
+        /* Section */
+        .section { margin-bottom: 50px; }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 30px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid var(--libertario-cream);
+        }
+
+        .section-header .icon {
+            width: 48px;
+            height: 48px;
+            background: var(--libertario-blue);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--libertario-gold);
+            font-size: 1.5rem;
+        }
+
+        .section-header h2 { font-size: 1.5rem; color: var(--libertario-blue); }
+        .section-header .badge {
+            background: var(--libertario-cream);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-left: auto;
+        }
+
+        /* Pipeline Cards */
+        .pipeline-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .pipeline-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(24, 43, 85, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .pipeline-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(24, 43, 85, 0.15);
+        }
+
+        .pipeline-card.abierta { border: 3px solid var(--success-green); }
+
+        .card-header {
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .card-header.colombia { background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: #333; }
+        .card-header.mexico { background: linear-gradient(135deg, #006847 0%, #00a86b 100%); color: white; }
+        .card-header.costarica { background: linear-gradient(135deg, #002b7f 0%, #0066cc 100%); color: white; }
+        .card-header.india { background: linear-gradient(135deg, #FF9933 0%, #FFB366 100%); color: #333; }
+        .card-header.chile { background: linear-gradient(135deg, #D52B1E 0%, #ff4444 100%); color: white; }
+
+        .country-flag { font-size: 1.8rem; }
+        .card-title { flex: 1; }
+        .card-title h3 { font-size: 1.2rem; font-weight: 600; }
+        .card-title .location { font-size: 0.85rem; opacity: 0.9; }
+
+        .progress-badge {
+            background: rgba(255,255,255,0.3);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .card-body { padding: 20px; }
+
+        .progress-section { margin-bottom: 16px; }
+        .progress-label { display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 8px; }
+        .progress-bar { height: 10px; background: #e9ecef; border-radius: 5px; overflow: hidden; }
+        .progress-fill { height: 100%; border-radius: 5px; transition: width 0.5s ease; }
+        .progress-fill.high { background: linear-gradient(90deg, var(--success-green), #20c997); }
+        .progress-fill.medium { background: linear-gradient(90deg, var(--warning-orange), #ffc107); }
+        .progress-fill.low { background: linear-gradient(90deg, var(--danger-red), #fd7e14); }
+
+        .card-details { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        .detail-item { }
+        .detail-item .label { font-size: 0.75rem; color: #888; text-transform: uppercase; }
+        .detail-item .value { font-size: 1rem; font-weight: 600; color: var(--libertario-blue); }
+        .detail-item .value.success { color: var(--success-green); }
+        .detail-item .value.gold { color: var(--libertario-gold); }
+
+        .status-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .status-badge.construccion { background: #e3f2fd; color: #1976d2; }
+        .status-badge.proxima { background: #fff3e0; color: #f57c00; }
+        .status-badge.operando { background: #e8f5e9; color: #388e3c; }
+
+        /* Sales Projection */
+        .projection-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(24, 43, 85, 0.1);
+        }
+
+        .projection-table th {
+            background: var(--libertario-blue);
+            color: white;
+            padding: 16px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .projection-table th.amount { text-align: right; }
+
+        .projection-table td {
+            padding: 14px 16px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .projection-table td.amount {
+            text-align: right;
+            font-family: 'Courier New', monospace;
+            font-weight: 600;
+        }
+
+        .projection-table tr.country-row { background: var(--libertario-cream); font-weight: 700; }
+        .projection-table tr.country-row td { border-bottom: 2px solid var(--libertario-gold); }
+        .projection-table tr.store-row td:first-child { padding-left: 32px; }
+
+        .projection-table tr.total-row { background: var(--libertario-blue); color: white; }
+        .projection-table tr.total-row td { font-weight: 700; font-size: 1.1rem; }
+
+        /* Timeline */
+        .timeline-container {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(24, 43, 85, 0.08);
+            overflow-x: auto;
+        }
+
+        .timeline {
+            display: flex;
+            gap: 0;
+            min-width: 800px;
+        }
+
+        .timeline-month {
+            flex: 1;
+            text-align: center;
+            padding: 20px 10px;
+            border-right: 1px solid #eee;
+        }
+
+        .timeline-month:last-child { border-right: none; }
+
+        .month-label { font-weight: 600; color: var(--libertario-blue); margin-bottom: 16px; }
+
+        .timeline-items { display: flex; flex-direction: column; gap: 8px; }
+
+        .timeline-item {
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .timeline-item.colombia { background: #fff8e1; color: #ff8f00; }
+        .timeline-item.mexico { background: #e8f5e9; color: #2e7d32; }
+        .timeline-item.costarica { background: #e3f2fd; color: #1565c0; }
+        .timeline-item.india { background: #fff3e0; color: #e65100; }
+        .timeline-item.chile { background: #ffebee; color: #c62828; }
+
+        .month-revenue {
+            margin-top: 16px;
+            padding-top: 12px;
+            border-top: 2px solid var(--libertario-gold);
+            font-weight: 700;
+            color: var(--libertario-blue);
+        }
+
+        .month-revenue .label { font-size: 0.7rem; color: #888; text-transform: uppercase; }
+        .month-revenue .value { font-size: 1.1rem; }
+
+        /* Photo Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(24, 43, 85, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover { transform: scale(1.03); }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-item .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(24, 43, 85, 0.9));
+            padding: 20px 16px 16px;
+            color: white;
+        }
+
+        .gallery-item .overlay h4 { font-size: 1rem; margin-bottom: 4px; }
+        .gallery-item .overlay span { font-size: 0.8rem; opacity: 0.8; }
+
+        /* Footer */
+        .footer {
+            background: var(--libertario-cream);
+            padding: 30px 60px;
+            margin-top: 60px;
+            text-align: center;
+            color: #666;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 1200px) {
+            .pipeline-grid { grid-template-columns: repeat(2, 1fr); }
+            .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .summary-grid { grid-template-columns: repeat(2, 1fr); }
+            .pipeline-grid { grid-template-columns: 1fr; }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="header-content">
+        <div class="logo-section">
+            <h1>LIBERTARIO <span>COFFEE</span></h1>
+            <div class="subtitle">Pipeline de Tiendas - Febrero 2026</div>
+        </div>
+        <div class="header-info">
+            <div class="date">Actualizado: 2 de Febrero, 2026</div>
+            <div class="doc-type">11 Proyectos en 5 Paises</div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <!-- Summary Cards -->
+    <div class="summary-grid">
+        <div class="summary-card">
+            <div class="label">En Construccion</div>
+            <div class="value">5</div>
+            <div class="sublabel">Aperturas Mar-Abr 2026</div>
+        </div>
+        <div class="summary-card">
+            <div class="label">Proximas a Iniciar</div>
+            <div class="value">2</div>
+            <div class="sublabel">Inicio Feb-Mar 2026</div>
+        </div>
+        <div class="summary-card">
+            <div class="label">Abierta - Saldo Pend.</div>
+            <div class="value">1</div>
+            <div class="sublabel">Chile - Nueva Costanera</div>
+        </div>
+        <div class="summary-card highlight">
+            <div class="label">Capex Total Apertura</div>
+            <div class="value">$1.44M</div>
+            <div class="sublabel">Para completar 11 tiendas</div>
+        </div>
+    </div>
+
+    <!-- Pipeline Section -->
+    <div class="section">
+        <div class="section-header">
+            <div class="icon">&#9881;</div>
+            <h2>Pipeline de Tiendas</h2>
+            <div class="badge">7 Proyectos Activos + 4 Planeados</div>
+        </div>
+
+        <div class="pipeline-grid">
+            <!-- Velo Costa Rica -->
+            <div class="pipeline-card">
+                <div class="card-header costarica">
+                    <span class="country-flag">🇨🇷</span>
+                    <div class="card-title">
+                        <h3>Velo</h3>
+                        <div class="location">San Jose, Costa Rica</div>
+                    </div>
+                    <div class="progress-badge">90%</div>
+                </div>
+                <div class="card-body">
+                    <div class="progress-section">
+                        <div class="progress-label">
+                            <span>Avance de obra</span>
+                            <span class="status-badge construccion">En Construccion</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill high" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <div class="detail-item">
+                            <div class="label">Apertura</div>
+                            <div class="value">1 Mar 2026</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="label">Inversion Feb</div>
+                            <div class="value gold">$50K</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="label">Ventas 6 meses</div>
+                            <div class="value success">$184K</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="label">Ventas/mes</div>
+                            <div class="value">$31K</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Laureles Medellin -->
+            <div class="pipeline-card">
+                <div class="card-header colombia">
+                    <span class="country-flag">🇨🇴</span>
+                    <div class="card-title">
+                        <h3>Laureles</h3>
+                        <div class="location">Medellin, Colombia</div>
+                    </div>
+                    <div class="progress-badge">85%</div>
+                </div>
+                <div class="card-body">
+                    <div class="progress-section">
+                        <div class="progress-label">
+                            <span>Avance de obra</span>
+                            <span class="status-badge construccion">En Construccion</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill high" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <div class="detail-item">
+                            <div class="label">Apertura</div>
+                            <div class="value">1 Mar 2026</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="label">Inversion Feb</div>
+                            <div class="value gold">$159K</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="label">Ventas 6 meses</div>
+                            <div class="value success">$189K</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="label">Ventas/mes</div>
+                            <div class="value">$32K</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Puebla Mexico -->
+            <div class="pipeline-card">
+                <div class="card-header mexico">
+                    <span class="country-flag">🇲🇽</span>
+                    <div class="card-title">
+                        <h3>Puebla</h3>
+                        <div class="location">Centro Historico, Puebla</div>
+                    </div>
+                    <div class="progress-badge">80%</div>
+                </div>
+                <div class="card-body">
+                    <div class="progress-section">
+                        <div class="progress-label">
+                            <span>Avance de obra</span>
+                            <span class="status-badge construccion">En Construccion</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill high" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <div class="detail-item">
+                            <div class="label">Apertura</div>
+                            <div class="value">1 Mar 2026</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="label">Inversion Feb</div>
+                            <div class="value gold">$100K</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="label">Ventas 6 meses</div>
+                            <div class="value success">$189K</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="label">Ventas/mes</div>
+                            <div class="value">$32K</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Calle 140 Bogota -->
+            <div class="pipeline-card">
+                <div class="card-header colombia">
+                    <span class="country-flag">🇨🇴</span>
+                    <div class="card-title">
+                        <h3>Calle 140</h3>
+                        <div class="location">Bogota, Colombia</div>
+                    </div>
+                    <div class="progress-badge">75%</div>
+                </div>
+                <div class="card-body">
+                    <div class="progress-section">
+                        <div class="progress-label">
+                            <span>Avance de obra</span>
+                            <span class="status-badge construccion">En Construccion</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill medium" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <div class="detail-item">
+                            <div class="label">Apertura</div>
+                            <div class="value">1 Mar 2026</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="label">Inversion Feb</div>
+                            <div class="value gold">$50K</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="label">Ventas 6 meses</div>
+                            <div class="value success">$189K</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="label">Ventas/mes</div>
+                            <div class="value">$32K</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gurgaon India -->
+            <div class="pipeline-card">
+                <div class="card-header india">
+                    <span class="country-flag">🇮🇳</span>
+                    <div class="card-title">
+                        <h3>Gurgaon</h3>
+                        <div class="location">Delhi NCR, India</div>
+                    </div>
+                    <div class="progress-badge">30%</div>
+                </div>
+                <div class="card-body">
+                    <div class="progress-section">
+                        <div class="progress-label">
+                            <span>Avance de obra</span>
+                            <span class="status-badge construccion">En Construccion</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill low" style="width: 30%"></div>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <div class="detail-item">
+                            <div class="label">Apertura</div>
+                            <div class="value">1 Abr 2026</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="label">Inversion Feb</div>
+                            <div class="value gold">$150K</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="label">Ventas 6 meses</div>
+                            <div class="value success">$480K</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="label">Ventas/mes</div>
+                            <div class="value">$80K</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Manila Medellin -->
+            <div class="pipeline-card">
+                <div class="card-header colombia">
+                    <span class="country-flag">🇨🇴</span>
+                    <div class="card-title">
+                        <h3>Manila</h3>
+                        <div class="location">La Esquina, Medellin</div>
+                    </div>
+                    <div class="progress-badge">Inicia Feb</div>
+                </div>
+                <div class="card-body">
+                    <div class="progress-section">
+                        <div class="progress-label">
+                            <span>Avance de obra</span>
+                            <span class="status-badge proxima">Proxima a Iniciar</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill low" style="width: 5%"></div>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <div class="detail-item">
+                            <div class="label">Apertura</div>
+                            <div class="value">1 Abr 2026</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="label">Capex Total</div>
+                            <div class="value gold">$125K</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="label">Ventas 6 meses</div>
+                            <div class="value success">$189K</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="label">Inicio Obra</div>
+                            <div class="value">Sem 2 Feb</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- El Zarzo Medellin -->
+            <div class="pipeline-card">
+                <div class="card-header colombia">
+                    <span class="country-flag">🇨🇴</span>
+                    <div class="card-title">
+                        <h3>El Zarzo</h3>
+                        <div class="location">Hotel El Zarzo, Medellin</div>
+                    </div>
+                    <div class="progress-badge">Inicia Mar</div>
+                </div>
+                <div class="card-body">
+                    <div class="progress-section">
+                        <div class="progress-label">
+                            <span>Avance de obra</span>
+                            <span class="status-badge proxima">Proxima a Iniciar</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill low" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <div class="detail-item">
+                            <div class="label">Apertura</div>
+                            <div class="value">1 May 2026</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="label">Capex Total</div>
+                            <div class="value gold">$200K</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="label">Ventas 6 meses</div>
+                            <div class="value success">$189K</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="label">Inicio Obra</div>
+                            <div class="value">Sem 1 Mar</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nueva Costanera Chile - ABIERTA -->
+            <div class="pipeline-card abierta">
+                <div class="card-header chile">
+                    <span class="country-flag">🇨🇱</span>
+                    <div class="card-title">
+                        <h3>Nueva Costanera</h3>
+                        <div class="location">Santiago, Chile</div>
+                    </div>
+                    <div class="progress-badge">&#9733; ABIERTA</div>
+                </div>
+                <div class="card-body">
+                    <div class="progress-section">
+                        <div class="progress-label">
+                            <span>Estado</span>
+                            <span class="status-badge operando">En Operacion</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill high" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <div class="detail-item">
+                            <div class="label">Apertura</div>
+                            <div class="value success">Ene 2026</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="label">Saldo Pendiente</div>
+                            <div class="value gold">$60K</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="label">Ventas 6 meses</div>
+                            <div class="value success">$189K</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="label">Ventas/mes</div>
+                            <div class="value">$32K</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sales Timeline -->
+    <div class="section">
+        <div class="section-header">
+            <div class="icon">&#128200;</div>
+            <h2>Proyeccion de Ventas por Apertura</h2>
+            <div class="badge">Ingresos Primeros 6 Meses por Tienda</div>
+        </div>
+
+        <div class="timeline-container">
+            <div class="timeline">
+                <div class="timeline-month">
+                    <div class="month-label">ENE 2026</div>
+                    <div class="timeline-items">
+                        <div class="timeline-item chile">Nueva Costanera</div>
+                    </div>
+                    <div class="month-revenue">
+                        <div class="label">Nuevas ventas/mes</div>
+                        <div class="value">+$32K</div>
+                    </div>
+                </div>
+                <div class="timeline-month">
+                    <div class="month-label">MAR 2026</div>
+                    <div class="timeline-items">
+                        <div class="timeline-item costarica">Velo</div>
+                        <div class="timeline-item colombia">Laureles</div>
+                        <div class="timeline-item mexico">Puebla</div>
+                        <div class="timeline-item colombia">Calle 140</div>
+                    </div>
+                    <div class="month-revenue">
+                        <div class="label">Nuevas ventas/mes</div>
+                        <div class="value">+$127K</div>
+                    </div>
+                </div>
+                <div class="timeline-month">
+                    <div class="month-label">ABR 2026</div>
+                    <div class="timeline-items">
+                        <div class="timeline-item india">Gurgaon</div>
+                        <div class="timeline-item colombia">Manila</div>
+                    </div>
+                    <div class="month-revenue">
+                        <div class="label">Nuevas ventas/mes</div>
+                        <div class="value">+$112K</div>
+                    </div>
+                </div>
+                <div class="timeline-month">
+                    <div class="month-label">MAY 2026</div>
+                    <div class="timeline-items">
+                        <div class="timeline-item colombia">El Zarzo</div>
+                        <div class="timeline-item mexico">Mexico 4</div>
+                        <div class="timeline-item india">India 3</div>
+                        <div class="timeline-item chile">Chile 2</div>
+                    </div>
+                    <div class="month-revenue">
+                        <div class="label">Nuevas ventas/mes</div>
+                        <div class="value">+$176K</div>
+                    </div>
+                </div>
+                <div class="timeline-month" style="background: var(--libertario-cream);">
+                    <div class="month-label" style="color: var(--libertario-gold);">TOTAL H1</div>
+                    <div class="timeline-items">
+                        <div style="font-size: 2rem; font-weight: 700; color: var(--libertario-blue); margin: 20px 0;">11</div>
+                        <div style="font-size: 0.85rem; color: #666;">Tiendas Nuevas</div>
+                    </div>
+                    <div class="month-revenue">
+                        <div class="label">Ventas acumuladas 6m</div>
+                        <div class="value" style="color: var(--success-green);">$2.66M</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Detailed Projection Table -->
+    <div class="section">
+        <div class="section-header">
+            <div class="icon">$</div>
+            <h2>Detalle de Inversion y Proyeccion</h2>
+        </div>
+
+        <table class="projection-table">
+            <thead>
+                <tr>
+                    <th>Pais / Tienda</th>
+                    <th class="amount">Capex Necesario</th>
+                    <th>Fecha Apertura</th>
+                    <th class="amount">Ingresos 6 Meses</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="country-row">
+                    <td><strong>🇨🇴 Colombia</strong></td>
+                    <td class="amount">$534,411</td>
+                    <td>-</td>
+                    <td class="amount" style="color: var(--success-green);">$756,000</td>
+                </tr>
+                <tr class="store-row">
+                    <td>Bogota - Calle 140</td>
+                    <td class="amount">$50,000</td>
+                    <td>Mar 2026</td>
+                    <td class="amount">$189,000</td>
+                </tr>
+                <tr class="store-row">
+                    <td>Medellin - Laureles</td>
+                    <td class="amount">$159,007</td>
+                    <td>Mar 2026</td>
+                    <td class="amount">$189,000</td>
+                </tr>
+                <tr class="store-row">
+                    <td>Medellin - Manila</td>
+                    <td class="amount">$125,404</td>
+                    <td>Abr 2026</td>
+                    <td class="amount">$189,000</td>
+                </tr>
+                <tr class="store-row">
+                    <td>Medellin - El Zarzo</td>
+                    <td class="amount">$200,000</td>
+                    <td>May 2026</td>
+                    <td class="amount">$189,000</td>
+                </tr>
+
+                <tr class="country-row">
+                    <td><strong>🇲🇽 Mexico</strong></td>
+                    <td class="amount">$300,000</td>
+                    <td>-</td>
+                    <td class="amount" style="color: var(--success-green);">$378,000</td>
+                </tr>
+                <tr class="store-row">
+                    <td>Puebla - Centro Historico</td>
+                    <td class="amount">$100,000</td>
+                    <td>Mar 2026</td>
+                    <td class="amount">$189,000</td>
+                </tr>
+                <tr class="store-row">
+                    <td>Mexico 4</td>
+                    <td class="amount">$200,000</td>
+                    <td>May 2026</td>
+                    <td class="amount">$189,000</td>
+                </tr>
+
+                <tr class="country-row">
+                    <td><strong>🇨🇷 Costa Rica</strong></td>
+                    <td class="amount">$50,000</td>
+                    <td>-</td>
+                    <td class="amount" style="color: var(--success-green);">$184,000</td>
+                </tr>
+                <tr class="store-row">
+                    <td>Velo - San Jose</td>
+                    <td class="amount">$50,000</td>
+                    <td>Mar 2026</td>
+                    <td class="amount">$184,000</td>
+                </tr>
+
+                <tr class="country-row">
+                    <td><strong>🇮🇳 India</strong></td>
+                    <td class="amount">$300,000</td>
+                    <td>-</td>
+                    <td class="amount" style="color: var(--success-green);">$960,000</td>
+                </tr>
+                <tr class="store-row">
+                    <td>Gurgaon - Delhi NCR</td>
+                    <td class="amount">$150,000</td>
+                    <td>Abr 2026</td>
+                    <td class="amount">$480,000</td>
+                </tr>
+                <tr class="store-row">
+                    <td>India 3</td>
+                    <td class="amount">$150,000</td>
+                    <td>May 2026</td>
+                    <td class="amount">$480,000</td>
+                </tr>
+
+                <tr class="country-row">
+                    <td><strong>🇨🇱 Chile</strong></td>
+                    <td class="amount">$260,000</td>
+                    <td>-</td>
+                    <td class="amount" style="color: var(--success-green);">$378,000</td>
+                </tr>
+                <tr class="store-row">
+                    <td>Nueva Costanera (saldo)</td>
+                    <td class="amount">$60,000</td>
+                    <td>Ene 2026 &#9733;</td>
+                    <td class="amount">$189,000</td>
+                </tr>
+                <tr class="store-row">
+                    <td>Chile 2</td>
+                    <td class="amount">$200,000</td>
+                    <td>May 2026</td>
+                    <td class="amount">$189,000</td>
+                </tr>
+
+                <tr class="total-row">
+                    <td><strong>TOTAL</strong></td>
+                    <td class="amount">$1,444,411</td>
+                    <td>11 Tiendas</td>
+                    <td class="amount">$2,656,000</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Photo Gallery -->
+    <div class="section">
+        <div class="section-header">
+            <div class="icon">&#128247;</div>
+            <h2>Galeria de Avances - Febrero 2026</h2>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="fotos_obra/velo_1.png" alt="Velo Costa Rica">
+                <div class="overlay">
+                    <h4>Velo</h4>
+                    <span>San Jose, Costa Rica - 90%</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="fotos_obra/velo_2.png" alt="Velo Interior">
+                <div class="overlay">
+                    <h4>Velo - Interior</h4>
+                    <span>Costa Rica</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="fotos_obra/laureles_1.jpeg" alt="Laureles Medellin">
+                <div class="overlay">
+                    <h4>Laureles</h4>
+                    <span>Medellin, Colombia - 85%</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="fotos_obra/laureles_2.jpeg" alt="Laureles Interior">
+                <div class="overlay">
+                    <h4>Laureles - Escalera</h4>
+                    <span>Colombia</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="fotos_obra/puebla_1.jpeg" alt="Puebla Mexico">
+                <div class="overlay">
+                    <h4>Puebla</h4>
+                    <span>Centro Historico, Mexico - 80%</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="fotos_obra/puebla_2.jpeg" alt="Puebla Interior">
+                <div class="overlay">
+                    <h4>Puebla - Acabados</h4>
+                    <span>Mexico</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="fotos_obra/calle140_1.png" alt="Calle 140 Bogota">
+                <div class="overlay">
+                    <h4>Calle 140</h4>
+                    <span>Bogota, Colombia - 75%</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="fotos_obra/calle140_2.png" alt="Calle 140 Interior">
+                <div class="overlay">
+                    <h4>Calle 140 - Avance</h4>
+                    <span>Colombia</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="fotos_obra/gurgaon_1.png" alt="Gurgaon India">
+                <div class="overlay">
+                    <h4>Gurgaon</h4>
+                    <span>Delhi NCR, India - 30%</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="fotos_obra/gurgaon_2.png" alt="Gurgaon Render">
+                <div class="overlay">
+                    <h4>Gurgaon - Render</h4>
+                    <span>India</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="fotos_obra/manila_1.jpeg" alt="Manila Medellin">
+                <div class="overlay">
+                    <h4>Manila</h4>
+                    <span>La Esquina, Medellin</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="fotos_obra/manila_fachada.png" alt="Manila Fachada">
+                <div class="overlay">
+                    <h4>Manila - Fachada</h4>
+                    <span>Colombia</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="fotos_obra/elzarzo_fachada.jpeg" alt="El Zarzo">
+                <div class="overlay">
+                    <h4>El Zarzo</h4>
+                    <span>Hotel El Zarzo, Medellin</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="fotos_obra/elzarzo_1.jpeg" alt="El Zarzo Interior">
+                <div class="overlay">
+                    <h4>El Zarzo - Interior</h4>
+                    <span>Colombia</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="footer">
+    <p><strong>LIBERTARIO COFFEE ROASTERS</strong></p>
+    <p>Pipeline de Tiendas - Febrero 2026 | Documento interno para inversionistas</p>
+    <p style="margin-top: 10px; font-size: 0.8rem;">Capex total apertura: $1.44M | Ventas proyectadas 6 meses: $2.66M | ROI estimado: 1.84x</p>
+</div>
+
+</body>
+</html>
