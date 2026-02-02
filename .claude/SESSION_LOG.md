@@ -724,6 +724,57 @@ Completar analisis de SHA pendientes (India y Chile) y actualizar estructura cor
 
 ---
 
+## Sesion: 2026-02-02 (Continuacion) - Pipeline Tiendas y GitHub Pages
+
+### Objetivo
+Crear visualizacion HTML del Pipeline de Tiendas para inversionistas y publicar en GitHub Pages.
+
+### Completado
+
+**Pipeline de Tiendas HTML:**
+- Dashboard visual con 8 proyectos activos en 5 paises
+- Cards con barras de progreso por tienda
+- Tabla de proyecciones: Capex Necesario + Ingresos 6 meses
+- Galeria de 20 fotos de obra
+- Bandera Colombia corregida (emoji)
+- Progress bars ajustadas: Manila 15%, El Zarzo 5%
+- Fotos Nueva Costanera agregadas (6 imagenes)
+
+**GitHub Pages:**
+- Carpeta docs/ creada con index.html y fotos
+- Repositorio hecho publico
+- Configurado GitHub Actions para deployment
+- Workflow corregido (path: './docs')
+- **PUBLICADO EXITOSAMENTE**
+
+### URL Publica
+**https://fsardi19.github.io/libertario-serie-a-2026/**
+
+### Archivos Creados/Modificados
+
+| Archivo | Accion |
+|---------|--------|
+| output/presentacion/PIPELINE_TIENDAS_FEBRERO_2026.html | CREADO |
+| docs/index.html | CREADO (copia para GitHub Pages) |
+| docs/fotos_obra/* | CREADO (20 imagenes) |
+| .github/workflows/static.yml | CREADO/EDITADO |
+
+### Datos Clave del Pipeline
+
+| Metrica | Valor |
+|---------|-------|
+| Proyectos totales | 11 en 5 paises |
+| En construccion | 5 tiendas |
+| Capex necesario | $1.44M |
+| Ingresos proyectados 6m | $2.66M |
+| ROI estimado | 1.84x |
+
+### Proxima Sesion
+- Seguimiento apertura tiendas
+- Actualizacion de progress bars segun avance de obra
+
+---
+
 ## Sesion: 2026-02-02 (Continuacion) - Extension Nota Convertible
 
 ### Objetivo

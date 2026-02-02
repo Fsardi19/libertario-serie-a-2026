@@ -1,6 +1,6 @@
 # Progreso - SERIE A 2026 Libertario
 
-**Ultima actualizacion:** 2026-02-02 (Sesion 7 - Gobernanza + Extension Nota)
+**Ultima actualizacion:** 2026-02-02 (Sesion 8 - Pipeline Tiendas + GitHub Pages)
 **Estado General:** EN CURSO
 
 ## Objetivo Final
@@ -120,7 +120,34 @@ Seguimiento continuo de datos financieros y operativos
 | INFORME_JUNTA_SERIE_A_2026.md | Version Markdown | ENTREGADO |
 | datos_informe_junta.json | Datos estructurados para trazabilidad | ENTREGADO |
 | DASHBOARD_EMBUDO_INVERSIONISTAS.html | Dashboard interactivo embudo | ENTREGADO |
-| EMAIL_JUNTA_SERIE_A.md | Email para compartir con Junta | ENTREGADO |
+| PIPELINE_TIENDAS_FEBRERO_2026.html | Pipeline de tiendas con fotos | ENTREGADO |
+
+---
+
+## Pipeline de Tiendas (Febrero 2026)
+
+**URL Publica:** https://fsardi19.github.io/libertario-serie-a-2026/
+
+### Proyectos Activos
+
+| Tienda | Pais | Apertura | Capex | Progreso |
+|--------|------|----------|-------|----------|
+| Cedritos | Colombia | Ene 2026 | - | 90% |
+| El Zarzo | Colombia | Mar 2026 | $75K | 5% |
+| Manila | Colombia | Mar 2026 | $100K | 15% |
+| Nueva Costanera | Chile | Mar 2026 | $180K | 30% |
+| Escazu | Costa Rica | Abr 2026 | $184K | 30% |
+| Condesa | Mexico | Abr 2026 | $138K | 50% |
+| Indiranagar | India | Abr 2026 | $480K | 60% |
+| Koramangala | India | May 2026 | $480K | 40% |
+
+### Proyecciones Financieras
+
+| Metrica | Valor |
+|---------|-------|
+| Capex necesario total | $1.44M |
+| Ingresos proyectados 6m | $2.66M |
+| ROI estimado | 1.84x |
 
 ---
 
