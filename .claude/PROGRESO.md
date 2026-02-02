@@ -204,7 +204,7 @@ Seguimiento continuo de datos financieros y operativos
 
 ---
 
-## Nota Convertible - Analisis de Extension
+## Nota Convertible - Extension $5M → $5.5M
 
 ### Terminos Actuales (Nota $5M)
 | Termino | Valor |
@@ -217,23 +217,32 @@ Seguimiento continuo de datos financieros y operativos
 | Post-money | $37M |
 | % para holders | 13.51% |
 
-### Analisis Extension $500K (Nuevo Inversionista)
+### DECISION (02-02-2026 - Reunion Ana Maria Pelaez)
 
-| Escenario | % Original $5M | Efecto |
-|-----------|----------------|--------|
-| Sin extension | 13.51% | Base |
-| Extension mismos terminos | 13.33% | -0.18pp dilucion |
-| Extension cap $50M (recomendado) | 13.51% | Sin dilucion |
+**Opcion elegida:** Extender nota a $5.5M con mismos terminos + comunicacion transparente
 
-### Recomendacion
-- **Emitir nota separada** con cap $50M para los $500K
-- No modifica documentos existentes
-- Protege completamente a inversionistas originales
-- Justificacion: Menor riesgo para inversionista posterior
+**Razonamiento:**
+- Inversionistas sofisticados entienden que capital adicional fortalece la ronda
+- Abrir mini ronda separada de $500K "se ve mal" comercialmente
+- Dilucion minima (~0.9 puntos basicos por cada $250K invertido)
+- Transparencia > complejidad operativa
+
+**Proceso acordado:**
+1. Email proactivo a inversionistas existentes explicando extension
+2. NO requiere "otro si" - Whereas (B) del CLA permite notas adicionales
+3. Side Letter informativo (cortesia, no requiere firma)
+4. Ofrecer derecho de preferencia informal si quieren aumentar
+
+### Dilucion Real (Ejemplo)
+| Inversion | % en $5M | % en $5.5M | Perdida |
+|-----------|----------|------------|---------|
+| $250,000 | 0.676% | 0.667% | -$5,400 aprox |
 
 ### Documentos Relacionados
 - Template original: `output/datos/CONVERTIBLE_LOAN_AGREEMENT_TEMPLATE.md`
-- Email abogada: `output/EMAIL_ANA_CRISTINA_EXTENSION_NOTA.md`
+- Analisis legal: `output/legal/ANALISIS_EXTENSION_NOTA_CONVERTIBLE.md`
+- Email inversionistas: `output/EMAIL_INVERSIONISTAS_EXTENSION_NOTA.md`
+- Side Letter: `output/legal/SIDE_LETTER_EXTENSION_NOTA.md`
 
 ---
 
@@ -308,6 +317,23 @@ LIBERTARIO HOLDING (Panama)
 - Colombia 100% confirmado por Ana Maria Pelaez (30-01-2026) - NO EXISTE SHA
 - India SHA analizado 02-02-2026: Lock-up 5 años, Drag Floor $20M
 - Chile SHA analizado 02-02-2026: Lock-up hasta dic 2027, vesting adicional 7.5%
+- **Colombia capitalizacion en proceso** (02-02-2026): Aporte en especie de $1,000 → $13M USD
+
+### Pendientes Reunion Ana Maria (02-02-2026)
+
+| Tarea | Responsable | Estado |
+|-------|-------------|--------|
+| Email extension nota $500K a inversionistas | Felipe + equipo comercial | Pendiente |
+| Capitalizacion Colombia ($13M aporte especie) | Ana Maria + Arifa | En proceso |
+| SHA India firmado - recibido de Ana Maria | Claude | Recibido |
+| Abogado Panama (Gian Castillero) - cotizar alternativas | Ana Maria | Cotizando |
+| Cap table Chile - confirmacion | Ana Maria | Pendiente |
+
+### Temas Theo (Theodore O'Donnell - CEO Circular)
+- Pregunto sobre vesting Luis Felipe Arias
+- Felipe le explicara el miercoles que es en Carbon Roots, NO en Circular
+- No afecta due diligence de Circular ni beneficial owners
+- Theo preocupado por incluirlo en documento de beneficial owners para inversionistas
 
 ### Clausulas Serie A Clave
 - **Preemptive rights:** 7-10 dias segun pais

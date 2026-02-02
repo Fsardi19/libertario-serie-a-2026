@@ -48,15 +48,37 @@ Completar análisis de gobernanza corporativa para inversionistas y preparar doc
 - México: Diferencia técnica de 1% (75% vs 76% requerido)
 - India: Partnership operativo 55%/45% - estructura adecuada para modelo operativo
 
+### Reunion Ana Maria Pelaez (3pm)
+
+**Decision Extension Nota:**
+- Opcion elegida: Extender $5M → $5.5M con mismos terminos
+- Comunicacion transparente a inversionistas
+- NO requiere "otro si" (Whereas B lo permite)
+- Ana Maria de acuerdo con enfoque
+
+**Otros temas Libertario:**
+- Capitalizacion Colombia en proceso ($1,000 → $13M aporte especie)
+- SHA India firmado recibido de Ana Maria
+- Abogado Panama (Gian Castillero) - relacion deteriorada, cotizando alternativas (Velo Legal)
+- Cap table LCR Corp confirmado correcto
+
+**Circular/Carbon Roots (separado de Libertario):**
+- Luis Felipe Arias vesting: 1.5% de participacion Felipe → debe ser en Carbon Roots, NO Circular
+- Ana Maria Pelaez: 1% de Circular = 1.25% de Carbon Roots
+- Rodrigo Sardi pondra dinero adicional ($73K) tomando lo de socios que no participaron
+- Bagua Holdings (Daniel) comprando 5% Circular = 6% Carbon Roots por $500K
+- Cristina Roman ayudando con tramites cambiarios
+
 ### Pendiente
-- Revisión de documentos con Ana María Peláez
 - Completar placeholders en email de inversionistas (equipo comercial)
-- Obtener cap tables y certificados pendientes para Data Room
+- Enviar email extension nota a inversionistas
+- Reunion miercoles: Explicar a Theo (CEO Circular) que vesting Luis Felipe es en Carbon Roots, NO Circular
+- Cotizaciones abogados Panama alternativas
 
 ### Próxima Sesión
-1. Feedback de Ana María sobre recomendaciones
-2. Completar documentación Data Room
-3. Seguimiento respuesta Roman Irrure
+1. Finalizar email extension nota
+2. Seguimiento respuesta Roman Irrure
+3. Documentacion Data Room
 
 ---
 
