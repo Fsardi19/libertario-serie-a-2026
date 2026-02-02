@@ -1,6 +1,6 @@
 # Progreso - SERIE A 2026 Libertario
 
-**Ultima actualizacion:** 2026-01-30 (Sesion 6 - Due Diligence Legal)
+**Ultima actualizacion:** 2026-02-02 (Sesion 7 - Gobernanza + Extension Nota)
 **Estado General:** EN CURSO
 
 ## Objetivo Final
@@ -365,6 +365,29 @@ LIBERTARIO HOLDING (Panama)
 5. `inventario_data_room.md` - Archivos disponibles
 6. `archivos_pendientes.txt` - PDFs escaneados
 7. `sha_analisis.md` - SHA Panama
+8. `DUE_DILIGENCE_GOBERNANZA_CORPORATIVA.md` - Memo interno para Ana María ← NUEVO
+9. `DUE_DILIGENCE_GOBERNANZA_CORPORATIVA.docx` - Versión Word ← NUEVO
+10. `ANALISIS_EXTENSION_NOTA_CONVERTIBLE.md` - Análisis legal extensión ← NUEVO
+11. `SIDE_LETTER_EXTENSION_NOTA.md` - Side Letter inglés ← NUEVO
+12. `CARTA_NOTIFICACION_EXTENSION_NOTA.md` - Carta español ← NUEVO
+
+### Gobernanza Corporativa - Hallazgos Clave (02-02-2026)
+
+| País | % LCR | Mayoría Req. | Control | Contexto |
+|------|-------|--------------|---------|----------|
+| USA | 100% | N/A | ✅ Total | Subsidiaria |
+| Colombia | 100% | >50% | ✅ Total | Subsidiaria |
+| Chile | 92.5% | 86% | ✅ Operativo | Socios con vesting |
+| Costa Rica | 74% | 70% | ✅ Operativo | Relación estable |
+| México | 75% | 76% | ⚠️ Co-decisión | Diferencia técnica 1% |
+| India | 55% | 70% | ⚠️ Co-decisión | Partnership operativo |
+
+**Hallazgo crítico:** Endeudamiento NO es Reserved Matter en ningún SHA
+
+**Recomendaciones para Serie A:**
+- ALTA: Agregar covenants financieros al Holding (proactivo)
+- MEDIA: Unificar mayorías Chile (86%→70%), México (76%→75%)
+- NO hacer: Cambiar control India (socios operadores clave)
 
 ---
 

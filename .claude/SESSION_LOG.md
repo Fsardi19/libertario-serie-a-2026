@@ -7,6 +7,59 @@ Claude Code lo actualiza al cierre con /project:close.
 
 ---
 
+## Sesion: 2026-02-02 - Due Diligence Gobernanza + Documentos Extension Nota
+
+### Objetivo
+Completar análisis de gobernanza corporativa para inversionistas y preparar documentos para extensión de nota convertible.
+
+### Completado
+
+**Due Diligence Gobernanza Corporativa:**
+- Análisis completo de SHA de 7 jurisdicciones
+- Respuestas estructuradas para preguntas de inversionistas (endeudamiento, mayorías, exits)
+- Recomendaciones internas para Ana María Peláez
+- Enfoque pragmático y comercialmente consciente (India = partnership operativo, no "riesgo")
+
+**Documentos Extension Nota $5M → $5.5M:**
+- Análisis legal: Nota bajo ley de PANAMÁ (no Nueva York)
+- Hallazgo: Whereas (B) permite notas adicionales sin "otro sí"
+- Side Letter en inglés
+- Carta de Notificación en español
+- Análisis legal completo para abogada
+
+**Recomendaciones para Serie A:**
+- Prioridad ALTA: Covenants financieros proactivos al Holding
+- Prioridad MEDIA: Unificar mayorías (Chile 86%→70%, México 76%→75%)
+- NO Recomendado: Intentar cambiar control en India (socios operadores)
+
+### Archivos Creados/Modificados
+| Archivo | Descripción |
+|---------|-------------|
+| `output/legal/DUE_DILIGENCE_GOBERNANZA_CORPORATIVA.md` | Memo interno con análisis y recomendaciones |
+| `output/legal/DUE_DILIGENCE_GOBERNANZA_CORPORATIVA.docx` | Versión Word para compartir |
+| `output/legal/ANALISIS_EXTENSION_NOTA_CONVERTIBLE.md` | Análisis legal extensión |
+| `output/legal/SIDE_LETTER_EXTENSION_NOTA.md` | Side Letter en inglés |
+| `output/legal/CARTA_NOTIFICACION_EXTENSION_NOTA.md` | Carta en español |
+| `output/EMAIL_INVERSIONISTAS_EXTENSION_NOTA.md` | Email para inversionistas |
+
+### Hallazgos Clave
+- Endeudamiento NO es Reserved Matter en ningún SHA
+- Control suficiente en 5/7 jurisdicciones (USA, Colombia, Chile, Costa Rica, Panamá)
+- México: Diferencia técnica de 1% (75% vs 76% requerido)
+- India: Partnership operativo 55%/45% - estructura adecuada para modelo operativo
+
+### Pendiente
+- Revisión de documentos con Ana María Peláez
+- Completar placeholders en email de inversionistas (equipo comercial)
+- Obtener cap tables y certificados pendientes para Data Room
+
+### Próxima Sesión
+1. Feedback de Ana María sobre recomendaciones
+2. Completar documentación Data Room
+3. Seguimiento respuesta Roman Irrure
+
+---
+
 ## Sesion: 2026-01-28 - Setup Inicial y FASE 1-2
 
 ### Objetivo
