@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libertario Coffee - Solicitud de Prestamo Puente Febrero 2026</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --libertario-blue: #182b55;
+            --libertario-gold: #c9a227;
+            --libertario-cream: #f5f1eb;
+            --libertario-light-blue: #2a4a8a;
+            --success-green: #28a745;
+            --warning-orange: #fd7e14;
+            --danger-red: #dc3545;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+            color: var(--libertario-blue);
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--libertario-blue) 0%, var(--libertario-light-blue) 100%);
+            color: white;
+            padding: 40px 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 400px;
+            height: 400px;
+            background: var(--libertario-gold);
+            opacity: 0.1;
+            border-radius: 50%;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-section h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+        }
+
+        .logo-section h1 span {
+            color: var(--libertario-gold);
+            font-weight: 600;
+        }
+
+        .header-info { text-align: right; }
+        .header-info .date { font-size: 0.9rem; opacity: 0.8; }
+        .header-info .doc-type { font-size: 1.1rem; color: var(--libertario-gold); font-weight: 600; margin-top: 5px; }
+        .header-info .confidential { font-size: 0.75rem; background: rgba(255,255,255,0.15); padding: 4px 12px; border-radius: 4px; margin-top: 8px; display: inline-block; }
+
+        .container { max-width: 1400px; margin: 0 auto; padding: 40px; }
+
+        .executive-summary {
+            background: var(--libertario-cream);
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 40px;
+            border-left: 6px solid var(--libertario-gold);
+        }
+
+        .executive-summary h2 { color: var(--libertario-blue); font-size: 1.5rem; margin-bottom: 20px; }
+
+        .key-metrics { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; margin-top: 30px; }
+
+        .metric-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(24, 43, 85, 0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .metric-card:hover { transform: translateY(-5px); }
+        .metric-card .label { font-size: 0.85rem; color: #666; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; }
+        .metric-card .value { font-size: 1.8rem; font-weight: 700; color: var(--libertario-blue); }
+        .metric-card .value.gold { color: var(--libertario-gold); }
+        .metric-card .value.danger { color: var(--danger-red); }
+        .metric-card .value.success { color: var(--success-green); }
+        .metric-card .sublabel { font-size: 0.75rem; color: #888; margin-top: 4px; }
+
+        .section { margin-bottom: 50px; }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 30px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid var(--libertario-cream);
+        }
+
+        .section-header .icon {
+            width: 48px;
+            height: 48px;
+            background: var(--libertario-blue);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--libertario-gold);
+            font-size: 1.5rem;
+        }
+
+        .section-header h2 { font-size: 1.5rem; color: var(--libertario-blue); }
+
+        /* Tables */
+        .cash-flow-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(24, 43, 85, 0.1);
+            font-size: 0.9rem;
+        }
+
+        .cash-flow-table th {
+            background: var(--libertario-blue);
+            color: white;
+            padding: 14px 16px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .cash-flow-table th.amount { text-align: right; }
+        .cash-flow-table td { padding: 12px 16px; border-bottom: 1px solid #eee; }
+        .cash-flow-table td.amount { text-align: right; font-family: 'Courier New', monospace; font-weight: 600; }
+        .cash-flow-table tr:last-child td { border-bottom: none; }
+        .cash-flow-table tr:hover { background: var(--libertario-cream); }
+        .cash-flow-table .category-header { background: #f8f9fa; font-weight: 700; color: var(--libertario-blue); }
+        .cash-flow-table .subcategory { padding-left: 32px; color: #555; }
+        .cash-flow-table .total-row { background: var(--libertario-blue); color: white; font-weight: 700; }
+        .cash-flow-table .total-row td { border-bottom: none; }
+        .cash-flow-table .subtotal-row { background: var(--libertario-cream); font-weight: 600; }
+
+        .negative { color: var(--danger-red); }
+        .positive { color: var(--success-green); }
+
+        /* Bridge Loan Section */
+        .bridge-loan-section {
+            background: linear-gradient(135deg, var(--libertario-gold) 0%, #e8c547 100%);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+            color: var(--libertario-blue);
+        }
+
+        .bridge-loan-section h2 { font-size: 1.8rem; margin-bottom: 20px; }
+
+        .bridge-loan-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 30px; }
+
+        .loan-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(24, 43, 85, 0.15);
+        }
+
+        .loan-card h3 { color: var(--libertario-blue); margin-bottom: 20px; font-size: 1.1rem; display: flex; align-items: center; gap: 10px; }
+        .loan-card .badge { background: var(--libertario-gold); color: var(--libertario-blue); padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; }
+        .loan-card .badge.plan-b { background: var(--libertario-blue); color: white; }
+
+        .income-item { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #eee; }
+        .income-item:last-child { border-bottom: none; }
+        .income-item .source { color: #555; font-size: 0.95rem; }
+        .income-item .amount { font-weight: 700; color: var(--success-green); }
+        .income-item .amount.pending { color: var(--warning-orange); }
+
+        .total-income {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 2px solid var(--libertario-gold);
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        /* Timeline */
+        .timeline-visual {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin-top: 30px;
+            box-shadow: 0 4px 20px rgba(24, 43, 85, 0.1);
+        }
+
+        .timeline-bar { display: flex; height: 50px; border-radius: 8px; overflow: hidden; margin: 15px 0; }
+
+        .timeline-segment {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-align: center;
+            padding: 0 8px;
+        }
+
+        .timeline-segment.need { background: var(--danger-red); }
+        .timeline-segment.bridge { background: var(--libertario-gold); color: var(--libertario-blue); }
+        .timeline-segment.income { background: var(--success-green); }
+
+        .timeline-legend { display: flex; justify-content: center; gap: 30px; margin-top: 20px; flex-wrap: wrap; }
+        .legend-item { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; }
+        .legend-dot { width: 16px; height: 16px; border-radius: 4px; }
+
+        /* Projects Grid - 7 cards */
+        .projects-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+
+        .project-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(24, 43, 85, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover { transform: translateY(-5px); }
+
+        .project-card .image-container {
+            height: 180px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .project-card .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .project-card:hover .image-container img { transform: scale(1.1); }
+
+        .project-card .progress-badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: var(--libertario-gold);
+            color: var(--libertario-blue);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.8rem;
+        }
+
+        .project-card .progress-badge.starting { background: var(--libertario-blue); color: white; }
+        .project-card .progress-badge.open { background: var(--success-green); color: white; }
+
+        .project-card .country-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: var(--libertario-blue);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+        }
+
+        .project-card .content { padding: 20px; }
+        .project-card h3 { color: var(--libertario-blue); font-size: 1.1rem; margin-bottom: 4px; }
+        .project-card .location { color: #666; font-size: 0.85rem; margin-bottom: 12px; }
+
+        .project-card .investment {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 12px;
+            border-top: 1px solid #eee;
+            font-size: 0.85rem;
+        }
+
+        .project-card .investment .label { color: #888; }
+        .project-card .investment .value { font-size: 1.1rem; font-weight: 700; color: var(--libertario-gold); }
+
+        .progress-bar-container { margin: 10px 0; }
+        .progress-bar { height: 6px; background: #e9ecef; border-radius: 3px; overflow: hidden; }
+        .progress-bar .fill { height: 100%; background: linear-gradient(90deg, var(--libertario-gold), #e8c547); border-radius: 3px; }
+
+        /* Photo Gallery */
+        .photo-gallery { display: grid; grid-template-columns: repeat(7, 1fr); gap: 12px; margin-top: 30px; }
+
+        .photo-item {
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            aspect-ratio: 1;
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .photo-item:hover img { transform: scale(1.1); }
+
+        .photo-item .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(24, 43, 85, 0.9));
+            color: white;
+            padding: 30px 8px 8px;
+            font-size: 0.7rem;
+            text-align: center;
+        }
+
+        /* Charts */
+        .charts-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
+
+        .chart-card {
+            background: white;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 4px 20px rgba(24, 43, 85, 0.1);
+        }
+
+        .chart-card h3 { color: var(--libertario-blue); margin-bottom: 20px; font-size: 1rem; }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--libertario-blue) 0%, var(--libertario-light-blue) 100%);
+            border-radius: 20px;
+            padding: 50px;
+            color: white;
+            text-align: center;
+            margin-top: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -10%;
+            width: 300px;
+            height: 300px;
+            background: var(--libertario-gold);
+            opacity: 0.1;
+            border-radius: 50%;
+        }
+
+        .cta-section h2 { font-size: 1.8rem; margin-bottom: 10px; position: relative; z-index: 1; }
+        .cta-section .subtitle { font-size: 1rem; opacity: 0.9; margin-bottom: 20px; }
+        .cta-section .amount { font-size: 3.5rem; font-weight: 700; color: var(--libertario-gold); margin: 25px 0; position: relative; z-index: 1; }
+        .cta-section .period { font-size: 1.1rem; opacity: 0.9; position: relative; z-index: 1; }
+
+        .cta-section .details { margin-top: 30px; display: flex; justify-content: center; gap: 35px; position: relative; z-index: 1; flex-wrap: wrap; }
+        .cta-section .detail-item { text-align: center; }
+        .cta-section .detail-item .value { font-size: 1.4rem; font-weight: 600; color: var(--libertario-gold); }
+        .cta-section .detail-item .label { font-size: 0.8rem; opacity: 0.8; margin-top: 4px; }
+
+        .repayment-box {
+            background: rgba(255,255,255,0.1);
+            border: 2px solid var(--libertario-gold);
+            border-radius: 12px;
+            padding: 25px;
+            margin-top: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .repayment-box h4 { color: var(--libertario-gold); margin-bottom: 15px; font-size: 1rem; }
+        .repayment-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; text-align: center; }
+        .repayment-item .week { font-size: 0.8rem; opacity: 0.8; }
+        .repayment-item .value { font-size: 1.2rem; font-weight: 700; color: var(--libertario-gold); }
+
+        .footer {
+            background: var(--libertario-blue);
+            color: white;
+            padding: 30px 60px;
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer .brand { font-size: 1.2rem; letter-spacing: 2px; }
+        .footer .brand span { color: var(--libertario-gold); }
+        .footer .contact { font-size: 0.85rem; opacity: 0.8; }
+
+        /* Store Status Legend */
+        .status-legend {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .status-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+        }
+
+        .status-dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+        }
+
+        @media (max-width: 1200px) {
+            .projects-grid { grid-template-columns: repeat(2, 1fr); }
+            .key-metrics { grid-template-columns: repeat(3, 1fr); }
+            .bridge-loan-grid { grid-template-columns: 1fr; }
+            .photo-gallery { grid-template-columns: repeat(4, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .header { padding: 30px; }
+            .header-content { flex-direction: column; text-align: center; gap: 20px; }
+            .container { padding: 20px; }
+            .projects-grid { grid-template-columns: 1fr; }
+            .charts-grid { grid-template-columns: 1fr; }
+            .key-metrics { grid-template-columns: repeat(2, 1fr); }
+            .photo-gallery { grid-template-columns: repeat(2, 1fr); }
+            .cta-section .details { flex-direction: column; gap: 20px; }
+        }
+
+        @media print {
+            .header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .project-card, .chart-card { break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-section">
+                <h1>LIBERTARIO <span>COFFEE</span></h1>
+            </div>
+            <div class="header-info">
+                <div class="date">2 de Febrero, 2026</div>
+                <div class="doc-type">Solicitud de Prestamo Puente</div>
+                <div class="confidential">CONFIDENCIAL - INVERSIONISTAS</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Executive Summary -->
+        <div class="executive-summary">
+            <h2>Resumen Ejecutivo - Prestamo Puente Febrero 2026</h2>
+            <p style="font-size: 1.05rem; color: #444; margin-bottom: 20px;">
+                Solicitamos un <strong>prestamo puente</strong> para cubrir las necesidades de flujo de caja de las
+                <strong>primeras tres semanas de febrero</strong> mientras se materializan los ingresos de la ronda.
+                Actualmente tenemos <strong>5 tiendas en construccion</strong> y <strong>2 proximas a iniciar</strong>,
+                con aperturas programadas entre marzo y mayo 2026.
+            </p>
+
+            <div class="key-metrics">
+                <div class="metric-card">
+                    <div class="label">Prestamo Solicitado</div>
+                    <div class="value gold">$984K</div>
+                    <div class="sublabel">Semanas 1-3 Febrero</div>
+                </div>
+                <div class="metric-card">
+                    <div class="label">Ingresos Comprometidos</div>
+                    <div class="value success">$817K</div>
+                    <div class="sublabel">Ronda + Socios</div>
+                </div>
+                <div class="metric-card">
+                    <div class="label">Tiendas en Obra</div>
+                    <div class="value" style="color: var(--libertario-blue);">5</div>
+                    <div class="sublabel">En construccion activa</div>
+                </div>
+                <div class="metric-card">
+                    <div class="label">Proximas a Iniciar</div>
+                    <div class="value" style="color: var(--warning-orange);">2</div>
+                    <div class="sublabel">Feb-Mar 2026</div>
+                </div>
+                <div class="metric-card">
+                    <div class="label">Aperturas Q1</div>
+                    <div class="value" style="color: var(--libertario-blue);">4</div>
+                    <div class="sublabel">Marzo 2026</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bridge Loan Explanation -->
+        <div class="bridge-loan-section">
+            <h2>Estructura del Prestamo Puente</h2>
+            <p style="font-size: 1rem; margin-bottom: 10px;">
+                El prestamo puente permite mantener el ritmo de expansion mientras se formalizan los cierres de la ronda.
+                <strong>Los ingresos estan comprometidos</strong> - solo hay un desfase temporal entre la necesidad y el ingreso.
+            </p>
+
+            <div class="bridge-loan-grid">
+                <div class="loan-card">
+                    <h3><span class="badge">PLAN A</span> Ingresos Comprometidos de Ronda</h3>
+                    <div class="income-item">
+                        <span class="source">Semana 1 - Cierre Ronda</span>
+                        <span class="amount">+$370,000</span>
+                    </div>
+                    <div class="income-item">
+                        <span class="source">Semana 2 - Cierre Ronda</span>
+                        <span class="amount">+$250,000</span>
+                    </div>
+                    <div class="income-item">
+                        <span class="source">Semana 3 - Cierre Ronda</span>
+                        <span class="amount">+$130,000</span>
+                    </div>
+                    <div class="income-item">
+                        <span class="source">Socios Minoritarios (Semanas 1 y 3)</span>
+                        <span class="amount">+$66,578</span>
+                    </div>
+                    <div class="total-income">
+                        <span>Total Ingresos Febrero</span>
+                        <span style="color: var(--success-green);">$816,578</span>
+                    </div>
+                </div>
+
+                <div class="loan-card">
+                    <h3><span class="badge plan-b">PLAN B</span> Prestamo Puente (Esta Solicitud)</h3>
+                    <p style="color: #666; margin-bottom: 15px; font-size: 0.95rem;">
+                        Adelanto de capital para cubrir necesidades mientras se cierran los ingresos de la ronda.
+                    </p>
+                    <div class="income-item">
+                        <span class="source">Monto solicitado</span>
+                        <span class="amount pending">$984,206</span>
+                    </div>
+                    <div class="income-item">
+                        <span class="source">Plazo</span>
+                        <span style="font-weight: 600;">3 semanas (Feb 2026)</span>
+                    </div>
+                    <div class="income-item">
+                        <span class="source">Garantia</span>
+                        <span style="font-weight: 600;">Ingresos de ronda</span>
+                    </div>
+                    <div class="income-item">
+                        <span class="source">Devolucion</span>
+                        <span style="font-weight: 600; color: var(--success-green);">Al cierre de cada tramo</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-visual">
+                <h3 style="color: var(--libertario-blue); margin-bottom: 10px;">Flujo de Fondos - Febrero 2026</h3>
+                <div class="timeline-bar">
+                    <div class="timeline-segment need" style="width: 35%;">Necesidad $405K</div>
+                    <div class="timeline-segment need" style="width: 35%;">Necesidad $422K</div>
+                    <div class="timeline-segment need" style="width: 30%;">Necesidad $158K</div>
+                </div>
+                <div class="timeline-bar">
+                    <div class="timeline-segment bridge" style="width: 35%;">Prestamo Puente</div>
+                    <div class="timeline-segment bridge" style="width: 35%;">Prestamo Puente</div>
+                    <div class="timeline-segment bridge" style="width: 30%;">Prestamo Puente</div>
+                </div>
+                <div class="timeline-bar">
+                    <div class="timeline-segment income" style="width: 35%;">Ronda $410K</div>
+                    <div class="timeline-segment income" style="width: 35%;">Ronda $250K</div>
+                    <div class="timeline-segment income" style="width: 30%;">Ronda $157K</div>
+                </div>
+                <div class="timeline-legend">
+                    <div class="legend-item">
+                        <div class="legend-dot" style="background: var(--danger-red);"></div>
+                        <span>Necesidad de caja</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-dot" style="background: var(--libertario-gold);"></div>
+                        <span>Prestamo puente</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-dot" style="background: var(--success-green);"></div>
+                        <span>Ingresos ronda (devolucion)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Construction Progress - 7 Stores -->
+        <div class="section">
+            <div class="section-header">
+                <div class="icon">&#9881;</div>
+                <h2>Pipeline de Tiendas - 7 Proyectos en 5 Paises</h2>
+            </div>
+
+            <div class="status-legend">
+                <div class="status-item">
+                    <div class="status-dot" style="background: var(--libertario-gold);"></div>
+                    <span>En construccion (5)</span>
+                </div>
+                <div class="status-item">
+                    <div class="status-dot" style="background: var(--libertario-blue);"></div>
+                    <span>Proxima a iniciar (2)</span>
+                </div>
+                <div class="status-item">
+                    <div class="status-dot" style="background: var(--success-green);"></div>
+                    <span>Abierta - saldo pendiente (1)</span>
+                </div>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Velo - Costa Rica - 90% -->
+                <div class="project-card">
+                    <div class="image-container">
+                        <img src="fotos_obra/velo_1.png" alt="Velo Costa Rica">
+                        <span class="country-badge">Costa Rica</span>
+                        <span class="progress-badge">90%</span>
+                    </div>
+                    <div class="content">
+                        <h3>Velo</h3>
+                        <div class="location">San Jose, Costa Rica</div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar"><div class="fill" style="width: 90%"></div></div>
+                        </div>
+                        <div class="investment">
+                            <div>
+                                <div class="label">Apertura</div>
+                                <div style="font-weight: 600; color: var(--libertario-blue);">1 Mar 2026</div>
+                            </div>
+                            <div style="text-align: right;">
+                                <div class="label">Inversion Feb</div>
+                                <div class="value">$38K</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Laureles - Colombia - 85% -->
+                <div class="project-card">
+                    <div class="image-container">
+                        <img src="fotos_obra/laureles_1.jpeg" alt="Laureles Medellin">
+                        <span class="country-badge">Colombia</span>
+                        <span class="progress-badge">85%</span>
+                    </div>
+                    <div class="content">
+                        <h3>Laureles</h3>
+                        <div class="location">Medellin, Colombia</div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar"><div class="fill" style="width: 85%"></div></div>
+                        </div>
+                        <div class="investment">
+                            <div>
+                                <div class="label">Apertura</div>
+                                <div style="font-weight: 600; color: var(--libertario-blue);">1 Mar 2026</div>
+                            </div>
+                            <div style="text-align: right;">
+                                <div class="label">Inversion Feb</div>
+                                <div class="value">$159K</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Puebla - Mexico - 80% -->
+                <div class="project-card">
+                    <div class="image-container">
+                        <img src="fotos_obra/puebla_1.jpeg" alt="Puebla Mexico">
+                        <span class="country-badge">Mexico</span>
+                        <span class="progress-badge">80%</span>
+                    </div>
+                    <div class="content">
+                        <h3>Puebla</h3>
+                        <div class="location">Centro Historico, Puebla</div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar"><div class="fill" style="width: 80%"></div></div>
+                        </div>
+                        <div class="investment">
+                            <div>
+                                <div class="label">Apertura</div>
+                                <div style="font-weight: 600; color: var(--libertario-blue);">1 Mar 2026</div>
+                            </div>
+                            <div style="text-align: right;">
+                                <div class="label">Inversion Feb</div>
+                                <div class="value">$100K</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Calle 140 - Colombia - 75% -->
+                <div class="project-card">
+                    <div class="image-container">
+                        <img src="fotos_obra/calle140_1.png" alt="Calle 140 Bogota">
+                        <span class="country-badge">Colombia</span>
+                        <span class="progress-badge">75%</span>
+                    </div>
+                    <div class="content">
+                        <h3>Calle 140</h3>
+                        <div class="location">Bogota, Colombia</div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar"><div class="fill" style="width: 75%"></div></div>
+                        </div>
+                        <div class="investment">
+                            <div>
+                                <div class="label">Apertura</div>
+                                <div style="font-weight: 600; color: var(--libertario-blue);">1 Mar 2026</div>
+                            </div>
+                            <div style="text-align: right;">
+                                <div class="label">Inversion Feb</div>
+                                <div class="value">$50K</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gurgaon - India - 30% -->
+                <div class="project-card">
+                    <div class="image-container">
+                        <img src="fotos_obra/gurgaon_1.png" alt="Gurgaon India">
+                        <span class="country-badge">India</span>
+                        <span class="progress-badge">30%</span>
+                    </div>
+                    <div class="content">
+                        <h3>Gurgaon</h3>
+                        <div class="location">Delhi NCR, India</div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar"><div class="fill" style="width: 30%"></div></div>
+                        </div>
+                        <div class="investment">
+                            <div>
+                                <div class="label">Apertura</div>
+                                <div style="font-weight: 600; color: var(--libertario-blue);">1 Abr 2026</div>
+                            </div>
+                            <div style="text-align: right;">
+                                <div class="label">Inversion Feb</div>
+                                <div class="value">$113K</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Manila - Medellin - Starting Feb -->
+                <div class="project-card">
+                    <div class="image-container">
+                        <img src="fotos_obra/manila_fachada.png" alt="Manila Medellin">
+                        <span class="country-badge">Colombia</span>
+                        <span class="progress-badge starting">Inicia Feb</span>
+                    </div>
+                    <div class="content">
+                        <h3>Manila</h3>
+                        <div class="location">La Esquina, Medellin</div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar"><div class="fill" style="width: 0%; background: var(--libertario-blue);"></div></div>
+                        </div>
+                        <div class="investment">
+                            <div>
+                                <div class="label">Apertura</div>
+                                <div style="font-weight: 600; color: var(--libertario-blue);">1 Abr 2026</div>
+                            </div>
+                            <div style="text-align: right;">
+                                <div class="label">Inicio obra</div>
+                                <div style="font-weight: 600; color: var(--warning-orange);">Sem 2 Feb</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- El Zarzo - Medellin - Starting March -->
+                <div class="project-card">
+                    <div class="image-container">
+                        <img src="fotos_obra/elzarzo_fachada.jpeg" alt="El Zarzo Medellin">
+                        <span class="country-badge">Colombia</span>
+                        <span class="progress-badge starting">Inicia Mar</span>
+                    </div>
+                    <div class="content">
+                        <h3>El Zarzo</h3>
+                        <div class="location">Hotel El Zarzo, Medellin</div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar"><div class="fill" style="width: 0%; background: var(--libertario-blue);"></div></div>
+                        </div>
+                        <div class="investment">
+                            <div>
+                                <div class="label">Apertura</div>
+                                <div style="font-weight: 600; color: var(--libertario-blue);">1 May 2026</div>
+                            </div>
+                            <div style="text-align: right;">
+                                <div class="label">Inicio obra</div>
+                                <div style="font-weight: 600; color: var(--warning-orange);">Sem 1 Mar</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nueva Costanera - Chile - Open -->
+                <div class="project-card">
+                    <div class="image-container" style="background: linear-gradient(135deg, var(--success-green), #34c759); display: flex; align-items: center; justify-content: center;">
+                        <div style="text-align: center; color: white; padding: 20px;">
+                            <div style="font-size: 3rem;">&#9733;</div>
+                            <div style="font-weight: 600; margin-top: 10px;">ABIERTA</div>
+                        </div>
+                        <span class="country-badge">Chile</span>
+                        <span class="progress-badge open">Operando</span>
+                    </div>
+                    <div class="content">
+                        <h3>Nueva Costanera</h3>
+                        <div class="location">Santiago, Chile</div>
+                        <p style="font-size: 0.8rem; color: #666; margin: 10px 0;">Tienda abierta y en operacion. Requiere fondos para cerrar saldos pendientes de construccion.</p>
+                        <div class="investment">
+                            <div>
+                                <div class="label">Estado</div>
+                                <div style="font-weight: 600; color: var(--success-green);">En operacion</div>
+                            </div>
+                            <div style="text-align: right;">
+                                <div class="label">Saldo pendiente</div>
+                                <div class="value">$60K</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Photo Gallery -->
+        <div class="section">
+            <div class="section-header">
+                <div class="icon">&#128247;</div>
+                <h2>Galeria de Avances - Febrero 2026</h2>
+            </div>
+
+            <div class="photo-gallery">
+                <div class="photo-item">
+                    <img src="fotos_obra/velo_1.png" alt="Velo">
+                    <div class="overlay">Velo - Costa Rica</div>
+                </div>
+                <div class="photo-item">
+                    <img src="fotos_obra/laureles_1.jpeg" alt="Laureles">
+                    <div class="overlay">Laureles - Medellin</div>
+                </div>
+                <div class="photo-item">
+                    <img src="fotos_obra/puebla_1.jpeg" alt="Puebla">
+                    <div class="overlay">Puebla - Mexico</div>
+                </div>
+                <div class="photo-item">
+                    <img src="fotos_obra/calle140_1.png" alt="Calle 140">
+                    <div class="overlay">Calle 140 - Bogota</div>
+                </div>
+                <div class="photo-item">
+                    <img src="fotos_obra/gurgaon_1.png" alt="Gurgaon">
+                    <div class="overlay">Gurgaon - India</div>
+                </div>
+                <div class="photo-item">
+                    <img src="fotos_obra/manila_fachada.png" alt="Manila">
+                    <div class="overlay">Manila - Medellin</div>
+                </div>
+                <div class="photo-item">
+                    <img src="fotos_obra/elzarzo_fachada.jpeg" alt="El Zarzo">
+                    <div class="overlay">El Zarzo - Medellin</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cash Flow Table -->
+        <div class="section">
+            <div class="section-header">
+                <div class="icon">$</div>
+                <h2>Detalle de Flujo de Caja Semanal</h2>
+            </div>
+
+            <table class="cash-flow-table">
+                <thead>
+                    <tr>
+                        <th>Concepto</th>
+                        <th class="amount">Semana 1</th>
+                        <th class="amount">Semana 2</th>
+                        <th class="amount">Semana 3</th>
+                        <th class="amount">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="category-header">
+                        <td colspan="5"><strong>NECESIDADES (EGRESOS)</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Operacion (nomina, arriendos, proveedores)</td>
+                        <td class="amount negative">-$111,443</td>
+                        <td class="amount negative">-$23,897</td>
+                        <td class="amount negative">-$23,897</td>
+                        <td class="amount negative">-$159,237</td>
+                    </tr>
+                    <tr class="category-header">
+                        <td colspan="5"><strong>CAPEX - Obras en Construccion</strong></td>
+                    </tr>
+                    <tr class="subcategory">
+                        <td>Colombia (Calle 140, Laureles, Manila)</td>
+                        <td class="amount negative">-$83,603</td>
+                        <td class="amount negative">-$83,603</td>
+                        <td class="amount negative">-$83,603</td>
+                        <td class="amount negative">-$250,809</td>
+                    </tr>
+                    <tr class="subcategory">
+                        <td>Mexico (Puebla - finalizacion)</td>
+                        <td class="amount negative">-$100,000</td>
+                        <td class="amount">$0</td>
+                        <td class="amount">$0</td>
+                        <td class="amount negative">-$100,000</td>
+                    </tr>
+                    <tr class="subcategory">
+                        <td>Costa Rica (Velo)</td>
+                        <td class="amount negative">-$12,500</td>
+                        <td class="amount negative">-$12,500</td>
+                        <td class="amount negative">-$12,500</td>
+                        <td class="amount negative">-$37,500</td>
+                    </tr>
+                    <tr class="subcategory">
+                        <td>India (Gurgaon)</td>
+                        <td class="amount negative">-$37,500</td>
+                        <td class="amount negative">-$37,500</td>
+                        <td class="amount negative">-$37,500</td>
+                        <td class="amount negative">-$112,500</td>
+                    </tr>
+                    <tr class="subcategory">
+                        <td>Chile (Nueva Costanera - saldo pendiente)</td>
+                        <td class="amount negative">-$60,000</td>
+                        <td class="amount">$0</td>
+                        <td class="amount">$0</td>
+                        <td class="amount negative">-$60,000</td>
+                    </tr>
+                    <tr class="subtotal-row">
+                        <td><strong>Subtotal Capex</strong></td>
+                        <td class="amount negative"><strong>-$293,603</strong></td>
+                        <td class="amount negative"><strong>-$133,603</strong></td>
+                        <td class="amount negative"><strong>-$133,603</strong></td>
+                        <td class="amount negative"><strong>-$560,809</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Prestamos a subsidiarias</td>
+                        <td class="amount">$0</td>
+                        <td class="amount negative">-$264,160</td>
+                        <td class="amount">$0</td>
+                        <td class="amount negative">-$264,160</td>
+                    </tr>
+                    <tr class="total-row">
+                        <td><strong>TOTAL NECESIDAD SEMANAL</strong></td>
+                        <td class="amount"><strong>-$405,046</strong></td>
+                        <td class="amount"><strong>-$421,660</strong></td>
+                        <td class="amount"><strong>-$157,500</strong></td>
+                        <td class="amount"><strong>-$984,206</strong></td>
+                    </tr>
+
+                    <tr><td colspan="5" style="height: 15px; background: #f8f9fa;"></td></tr>
+
+                    <tr class="category-header">
+                        <td colspan="5"><strong>INGRESOS COMPROMETIDOS (Fuente de Devolucion)</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Ronda de inversion (cierres en proceso)</td>
+                        <td class="amount positive">+$370,000</td>
+                        <td class="amount positive">+$250,000</td>
+                        <td class="amount positive">+$130,000</td>
+                        <td class="amount positive">+$750,000</td>
+                    </tr>
+                    <tr>
+                        <td>Socios minoritarios locales</td>
+                        <td class="amount positive">+$40,000</td>
+                        <td class="amount">$0</td>
+                        <td class="amount positive">+$26,578</td>
+                        <td class="amount positive">+$66,578</td>
+                    </tr>
+                    <tr class="subtotal-row">
+                        <td><strong>Total Ingresos Comprometidos</strong></td>
+                        <td class="amount positive"><strong>+$410,000</strong></td>
+                        <td class="amount positive"><strong>+$250,000</strong></td>
+                        <td class="amount positive"><strong>+$156,578</strong></td>
+                        <td class="amount positive"><strong>+$816,578</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Charts -->
+        <div class="section">
+            <div class="charts-grid">
+                <div class="chart-card">
+                    <h3>Distribucion de Capex por Pais</h3>
+                    <canvas id="capexChart"></canvas>
+                </div>
+                <div class="chart-card">
+                    <h3>Necesidad vs Ingresos por Semana</h3>
+                    <canvas id="flowChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <h2>Solicitud de Prestamo Puente</h2>
+            <div class="subtitle">Capital temporal mientras se cierran los ingresos de la ronda</div>
+            <div class="amount">$984,206 USD</div>
+            <div class="period">Plazo: 3 semanas (Febrero 2026)</div>
+
+            <div class="details">
+                <div class="detail-item">
+                    <div class="value">7</div>
+                    <div class="label">Proyectos totales</div>
+                </div>
+                <div class="detail-item">
+                    <div class="value">5</div>
+                    <div class="label">Paises</div>
+                </div>
+                <div class="detail-item">
+                    <div class="value">4</div>
+                    <div class="label">Aperturas Marzo</div>
+                </div>
+                <div class="detail-item">
+                    <div class="value">$817K</div>
+                    <div class="label">Ingresos comprometidos</div>
+                </div>
+            </div>
+
+            <div class="repayment-box">
+                <h4>Plan de Devolucion con Ingresos de Ronda</h4>
+                <div class="repayment-grid">
+                    <div class="repayment-item">
+                        <div class="week">Semana 1</div>
+                        <div class="value">$410,000</div>
+                    </div>
+                    <div class="repayment-item">
+                        <div class="week">Semana 2</div>
+                        <div class="value">$250,000</div>
+                    </div>
+                    <div class="repayment-item">
+                        <div class="week">Semana 3</div>
+                        <div class="value">$156,578</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="brand">LIBERTARIO <span>COFFEE</span></div>
+        <div class="contact">Serie A 2026 | Documento confidencial para inversionistas</div>
+    </footer>
+
+    <script>
+        // Capex by Country Chart
+        new Chart(document.getElementById('capexChart').getContext('2d'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Colombia', 'India', 'Mexico', 'Chile', 'Costa Rica'],
+                datasets: [{
+                    data: [250809, 112500, 100000, 60000, 37500],
+                    backgroundColor: ['#182b55', '#c9a227', '#2a4a8a', '#e8c547', '#4a6da7'],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { position: 'bottom', labels: { padding: 15, usePointStyle: true, font: { size: 11 } } },
+                    tooltip: { callbacks: { label: ctx => ctx.label + ': $' + ctx.raw.toLocaleString() } }
+                }
+            }
+        });
+
+        // Cash Flow Chart
+        new Chart(document.getElementById('flowChart').getContext('2d'), {
+            type: 'bar',
+            data: {
+                labels: ['Semana 1', 'Semana 2', 'Semana 3'],
+                datasets: [
+                    { label: 'Necesidad', data: [405046, 421660, 157500], backgroundColor: '#dc3545', borderRadius: 6 },
+                    { label: 'Ingresos Ronda', data: [410000, 250000, 156578], backgroundColor: '#28a745', borderRadius: 6 }
+                ]
+            },
+            options: {
+                responsive: true,
+                scales: { y: { beginAtZero: true, ticks: { callback: v => '$' + (v/1000) + 'K' } } },
+                plugins: {
+                    legend: { position: 'bottom', labels: { padding: 15, usePointStyle: true } },
+                    tooltip: { callbacks: { label: ctx => ctx.dataset.label + ': $' + ctx.raw.toLocaleString() } }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

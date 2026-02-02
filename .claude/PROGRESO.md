@@ -237,21 +237,77 @@ Seguimiento continuo de datos financieros y operativos
 
 ---
 
-## Due Diligence Legal (Sesion 30-01-2026)
+## Due Diligence Legal (Actualizado 02-02-2026)
 
-### Estructura Corporativa Documentada
+### Estructura Corporativa Completa (6 Paises)
 
-| Pais | Entidad | % Holding | Socio Local | Mayoria Calif. |
-|------|---------|-----------|-------------|----------------|
-| Panama | Libertario Corp (HOLDING) | - | Arlen/Cassland/Bagua | 70% |
-| **Colombia** | **Libertario S.A.S.** | **100%** | **Ninguno** | Ley Colombia |
-| Costa Rica | Libertario S.A. | 82-85% | Oshala 15-18% | 70% |
-| Mexico | Libertario SAPI | 75% | Masanamacaya 25% | 76% |
-| USA | Futura LLC | 100% | - | N/A |
-| India | Libertario Pvt | 95%* | Arushi Mehra 5% | Ley India |
+```
+LIBERTARIO HOLDING (Panama)
+    └── LIBERTARIO COFFEE ROASTERS CORP (Panama) - LCR Corp
+            │
+            ├── Futura Coffee Roasters LLC (USA) ───────── 100%
+            ├── Libertario Coffee Roasters S.A.S (Colombia) ─ 100%
+            ├── Libertario Coffee Roasters SA de CV (Mexico) ─ 75% + Masanamacaya 25%
+            ├── Libertario Coffee Roasters SpA (Chile) ───── 92.5% + SAMA SpA 7.5%
+            ├── Libertario Coffee Roasters S.A. (Costa Rica) ─ 74% + Inv. Oshala 16-18%
+            └── Libertario Coffee Roasters PVT. LTD (India) ─ 55% + Miguel Villaquiran 45%
+```
 
-*India a nombre de Miguel Villaquiran, no directamente del holding
-**Colombia 100% confirmado por Ana Maria Pelaez (30-01-2026) - NO EXISTE SHA
+### Cap Table LCR Corp (Panama) - Holding Principal
+
+| Accionista | % |
+|------------|---|
+| Arlen Development Inc | 52.32% |
+| Cassland Group S.A. | 40.02% |
+| Bagua Holdings | 2.79% |
+| SI & B LLC (Juan Carlos Sardi) | 1.90% |
+| Miguel Angel Ladino | 1.48% |
+| Sebastian Villamizar | 1.48% |
+| **TOTAL** | **100%** |
+
+### Cap Table Arlen Development (Panama)
+
+| Accionista | % |
+|------------|---|
+| Coffee Hub S.A.S | 54.10% |
+| Inversiones Crono S.A.S | 34.40% |
+| Sebastian Villamizar | 5.30% |
+| Felipe Pinzon | 3.00% |
+| Laura Escobar | 1.60% |
+| Camilo Reyes | 1.60% |
+| **TOTAL** | **100%** |
+
+### Accionistas Individuales - Beneficial Ownership en LCR
+
+| Persona | % en LCR | Via |
+|---------|----------|-----|
+| Felipe Sardi (BP) | 38.02% | IC→AD, CH→AD, CG directo |
+| Orlando Sardi | ~15.44% | Via CG 38.58% x 40.02% |
+| Sebastian Villamizar | ~8.26% | Directo 1.48% + AD 5.30% + CH→AD |
+| Stella Aristizabal | ~7.66% | Via CG 19.14% x 40.02% |
+| Daniel Sardi (Bagua) | 2.79% | Via Bagua Holdings |
+| Juan Carlos Sardi (SI&B) | 1.90% | Via SI & B LLC |
+| Felipe Pinzon | ~1.57% | Via Arlen 3.00% x 52.32% |
+| Miguel Angel Ladino | 1.48% | Directo en LCR Corp |
+| Laura Escobar | ~0.84% | Via Arlen 1.60% x 52.32% |
+| Camilo Reyes | ~0.84% | Via Arlen 1.60% x 52.32% |
+
+### Estructura por Pais (Corregida)
+
+| Pais | Entidad | % LCR Corp | Socio Local | Mayoria Calif. |
+|------|---------|------------|-------------|----------------|
+| Panama | LCR Corp (HOLDING) | - | Ver cap table arriba | 70% |
+| **USA** | **Futura LLC** | **100%** | **Ninguno** | N/A |
+| **Colombia** | **LCR S.A.S.** | **100%** | **Ninguno** | Ley Colombia |
+| **Mexico** | **LCR SA de CV** | **75%** | **Masanamacaya 25%** | 76% |
+| **Chile** | **LCR SpA** | **92.5%** | **SAMA SpA 7.5%** | 86% |
+| **Costa Rica** | **LCR S.A.** | **74%** | **Inv. Oshala 16-18%** | 70% |
+| **India** | **LCR PVT. LTD** | **55%** | **Miguel Villaquiran 45%** | 70% |
+
+**Notas:**
+- Colombia 100% confirmado por Ana Maria Pelaez (30-01-2026) - NO EXISTE SHA
+- India SHA analizado 02-02-2026: Lock-up 5 años, Drag Floor $20M
+- Chile SHA analizado 02-02-2026: Lock-up hasta dic 2027, vesting adicional 7.5%
 
 ### Clausulas Serie A Clave
 - **Preemptive rights:** 7-10 dias segun pais
@@ -264,13 +320,42 @@ Seguimiento continuo de datos financieros y operativos
 - [x] SHA Mexico (Masanamacaya)
 - [x] Operating Agreement USA (Futura LLC)
 - [x] MOA/AOA India
+- [x] **SHA India (Miguel Villaquirán) - Mayo 2025** ← NUEVO 02-02-2026
 - [x] Bylaws Colombia
 - [x] Certificado Existencia Colombia
 
-### Documentos Pendientes
+### Documentos Analizados - SHA Completos
 - [x] ~~SHA Colombia~~ - NO EXISTE (confirmado Ana Maria Pelaez 30-01-2026)
-- [ ] SHA India (Miguel Villaquiran) - Por confirmar si existe
-- [ ] Cap tables actualizados (pendiente aporte en especie Colombia mid-Feb)
+- [x] SHA India (Miguel Villaquiran) - ANALIZADO 02-02-2026 (55%/45%, Lock-up 5 años)
+- [x] SHA Chile (Santiago Botero/SAMA SpA) - ANALIZADO 02-02-2026 (92.5%/7.5%)
+
+### Documentos Pendientes para Data Room
+
+**Cap Tables Detallados (6 paises):**
+- [ ] Panama - Libertario Holding (accionistas)
+- [ ] Panama - LCR Corp (VERIFICAR VIGENCIA - tenemos datos)
+- [ ] USA - Futura LLC (verificar 100%)
+- [ ] Colombia - LCR S.A.S. (verificar 100%, pendiente aporte en especie mid-Feb)
+- [ ] Mexico - LCR SA de CV (detalle Masanamacaya)
+- [ ] Chile - LCR SpA (detalle SAMA SpA)
+- [ ] Costa Rica - LCR S.A. (detalle Oshala)
+- [ ] India - LCR PVT. LTD (detalle Miguel Villaquiran)
+
+**Actas de Asamblea Holding 2024-2025:**
+- [ ] Libertario Holding (Panama) - Asambleas 2024, 2025
+- [ ] LCR Corp (Panama) - Asambleas 2024, 2025
+- [ ] Arlen Development (Panama) - Asambleas 2024, 2025
+
+**Certificados de Existencia Actualizados:**
+- [ ] Panama - Libertario Holding (Registro Publico)
+- [ ] Panama - LCR Corp (Registro Publico)
+- [ ] Panama - Arlen Development (Registro Publico)
+- [ ] USA - Futura LLC (State of Delaware?)
+- [ ] Colombia - LCR S.A.S. (CCB)
+- [ ] Mexico - LCR SA de CV (SAT/Registro)
+- [ ] Chile - LCR SpA (Conservador)
+- [ ] Costa Rica - LCR S.A. (Registro Nacional)
+- [ ] India - LCR PVT. LTD (ROC)
 
 ### Archivos Generados en output/legal/
 1. `estructura_corporativa.json` - Datos estructurados

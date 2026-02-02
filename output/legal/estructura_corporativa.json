@@ -1,28 +1,28 @@
 {
-  "fecha_actualizacion": "2026-01-30",
-  "holding": {
-    "nombre": "Libertario Coffee Roasters Corp",
-    "jurisdiccion": "Panamá",
-    "fecha_migracion": "2022-12-29",
-    "origen": "Islas Vírgenes Británicas",
-    "escritura_publica": "EP 14289",
-    "agente_residente": "Arias, Fabrega & Fabrega",
+  "fecha_actualizacion": "2026-02-02",
+  "estructura_completa": {
+    "descripcion": "LIBERTARIO HOLDING (Panama) -> LCR Corp (Panama) -> 6 subsidiarias",
+    "diagrama": [
+      "LIBERTARIO HOLDING (Panama)",
+      "    └── LIBERTARIO COFFEE ROASTERS CORP (Panama) - LCR Corp",
+      "            ├── Futura Coffee Roasters LLC (USA) ───────── 100%",
+      "            ├── Libertario Coffee Roasters S.A.S (Colombia) ─ 100%",
+      "            ├── Libertario Coffee Roasters SA de CV (Mexico) ─ 75% + Masanamacaya 25%",
+      "            ├── Libertario Coffee Roasters SpA (Chile) ───── 92.5% + SAMA SpA 7.5%",
+      "            ├── Libertario Coffee Roasters S.A. (Costa Rica) ─ 74% + Inv. Oshala 16-18%",
+      "            └── Libertario Coffee Roasters PVT. LTD (India) ─ 55% + Miguel Villaquiran 45%"
+    ]
+  },
+  "lcr_corp_cap_table": {
+    "entidad": "Libertario Coffee Roasters Corp",
+    "jurisdiccion": "Panama",
     "accionistas": [
-      {
-        "nombre": "Arlen Development Inc.",
-        "representante": "Nancy Eliette Cossú de Grisolía",
-        "rol": "Mayoritario/Fundadores"
-      },
-      {
-        "nombre": "Cassland Group S.A.",
-        "representante": "Barbara de Rodríguez",
-        "rol": "Inversionista"
-      },
-      {
-        "nombre": "Bagua Holdings S.A.",
-        "representante": "Nancy Eliette Cossú de Grisolía",
-        "rol": "Inversionista"
-      }
+      {"nombre": "Arlen Development Inc", "porcentaje": 52.32},
+      {"nombre": "Cassland Group S.A.", "porcentaje": 40.02},
+      {"nombre": "Bagua Holdings", "porcentaje": 2.79},
+      {"nombre": "SI & B LLC (Juan Carlos Sardi)", "porcentaje": 1.90},
+      {"nombre": "Miguel Angel Ladino", "porcentaje": 1.48},
+      {"nombre": "Sebastian Villamizar", "porcentaje": 1.48}
     ],
     "sha": {
       "fecha": "2025-02-06",
@@ -36,156 +36,144 @@
       "arbitraje": "ICC, Panamá, inglés, 3 árbitros"
     }
   },
+  "arlen_development_cap_table": {
+    "entidad": "Arlen Development Inc",
+    "jurisdiccion": "Panama",
+    "accionistas": [
+      {"nombre": "Coffee Hub S.A.S", "porcentaje": 54.10},
+      {"nombre": "Inversiones Crono S.A.S", "porcentaje": 34.40},
+      {"nombre": "Sebastian Villamizar", "porcentaje": 5.30},
+      {"nombre": "Felipe Pinzon", "porcentaje": 3.00},
+      {"nombre": "Laura Escobar", "porcentaje": 1.60},
+      {"nombre": "Camilo Reyes", "porcentaje": 1.60}
+    ]
+  },
+  "beneficial_ownership": [
+    {"persona": "Felipe Sardi (BP)", "porcentaje_lcr": 38.02, "via": "IC→AD, CH→AD, CG directo"},
+    {"persona": "Orlando Sardi", "porcentaje_lcr": 15.44, "via": "Via CG 38.58% x 40.02%"},
+    {"persona": "Sebastian Villamizar", "porcentaje_lcr": 8.26, "via": "Directo 1.48% + AD 5.30% + CH→AD"},
+    {"persona": "Stella Aristizabal", "porcentaje_lcr": 7.66, "via": "Via CG 19.14% x 40.02%"},
+    {"persona": "Daniel Sardi (Bagua)", "porcentaje_lcr": 2.79, "via": "Via Bagua Holdings"},
+    {"persona": "Juan Carlos Sardi (SI&B)", "porcentaje_lcr": 1.90, "via": "Via SI & B LLC"},
+    {"persona": "Felipe Pinzon", "porcentaje_lcr": 1.57, "via": "Via Arlen 3.00% x 52.32%"},
+    {"persona": "Miguel Angel Ladino", "porcentaje_lcr": 1.48, "via": "Directo en LCR Corp"},
+    {"persona": "Laura Escobar", "porcentaje_lcr": 0.84, "via": "Via Arlen 1.60% x 52.32%"},
+    {"persona": "Camilo Reyes", "porcentaje_lcr": 0.84, "via": "Via Arlen 1.60% x 52.32%"}
+  ],
   "subsidiarias": {
+    "usa": {
+      "nombre": "Futura Coffee Roasters LLC",
+      "jurisdiccion": "Delaware, USA",
+      "porcentaje_lcr": 100,
+      "socio_local": null,
+      "sha_status": "COMPLETO",
+      "sha_documento": "Operating Agreement",
+      "manager": "Sebastian Villamizar Aristizabal"
+    },
     "colombia": {
       "nombre": "Libertario Coffee Roasters S.A.S.",
       "jurisdiccion": "Colombia",
       "nit": "900.854.410-6",
-      "domicilio": "Bogotá D.C.",
-      "fecha_constitucion": "2015-05-05",
-      "tipo_societario": "S.A.S. (Ley 1258 de 2008)",
-      "fundador": "Felipe Sardi Aristizabal (vía Inversiones Crono S.A.S.)",
-      "capital": {
-        "autorizado": "COP 5,000,000,000",
-        "suscrito_pagado": "COP 4,827,416,000",
-        "acciones_clase_a": 4626716,
-        "valor_nominal_a": "COP 1,000",
-        "acciones_clase_b": 900000,
-        "valor_nominal_b": "COP 223",
-        "nota": "Pendiente ajuste por aporte en especie (mid-Feb 2026)"
+      "porcentaje_lcr": 100,
+      "socio_local": null,
+      "sha_status": "NO_EXISTE",
+      "sha_notas": "100% LCR Corp - confirmado Ana Maria Pelaez 30-01-2026",
+      "gobierno": "Solo estatutos (bylaws)"
+    },
+    "mexico": {
+      "nombre": "Libertario Coffee Roasters SA de CV",
+      "jurisdiccion": "Mexico",
+      "porcentaje_lcr": 75,
+      "socio_local": {
+        "nombre": "Masanamacaya Holdings S.A. de C.V.",
+        "porcentaje": 25,
+        "representante": "Cristina Macaya Dávila"
       },
-      "representantes_legales": {
-        "principal": {"nombre": "Miguel Angel Hernandez Ladino", "cc": "1031153013"},
-        "suplente_1": {"nombre": "Felipe Sardi Aristizabal", "cc": "79948875"},
-        "suplente_2": {"nombre": "Elisa Maria Gonzalez Madriñan", "cc": "38563186"}
+      "sha_status": "COMPLETO",
+      "sha_fecha": "2023-08-22",
+      "mayoria_calificada": 76
+    },
+    "chile": {
+      "nombre": "Libertario Coffee Roasters SpA",
+      "jurisdiccion": "Chile",
+      "porcentaje_lcr": 92.5,
+      "socio_local": {
+        "nombre": "SAMA SpA",
+        "beneficial_owner": "Santiago Botero",
+        "porcentaje_actual": 7.5,
+        "vesting_adicional": 7.5,
+        "vesting_schedule": "2.5% por año durante 3 años"
       },
-      "revisor_fiscal": "William Mauricio Martinez Forigua (C.C. 80472472, T.P. 97615-T)",
-      "limitaciones_rep_legal": {
-        "activos_deuda_mayor_100m": "Requiere Asamblea",
-        "contratos_mayor_500m": "Requiere Asamblea",
-        "operaciones_bancarias": "DOS FIRMAS (Principal + 2do Suplente)"
-      },
-      "tiendas_bogota": ["Calle 122", "Calle 85", "Bodega", "Calle 122 (nueva)", "Calle 82", "Calle 93", "Calle 109"],
-      "participacion_holding": "100%",
-      "sha": "NO APLICA - Libertario Corp es único accionista",
-      "gobierno": "Solo estatutos (bylaws) - ya analizados",
-      "notas": "Confirmado por Ana María Peláez (30-01-2026): No existe SHA Colombia"
+      "sha_status": "COMPLETO",
+      "sha_analisis": "02-02-2026",
+      "mayoria_calificada": 86,
+      "lock_up": "hasta diciembre 2027",
+      "non_compete": "Chile + 2 años post-salida",
+      "arbitraje": "ICC New York"
     },
     "costa_rica": {
       "nombre": "Libertario Coffee Roasters S.A.",
       "jurisdiccion": "Costa Rica",
       "cedula_juridica": "3-101-862048",
-      "fecha_constitucion": "2022-10-04",
-      "sha": {
-        "fecha": "2023-03-03",
-        "partes": [
-          {
-            "nombre": "Libertario Coffee Roasters Corp (Panamá)",
-            "participacion_inicial": "85%",
-            "representante": "Nancy Cossú León de Grisolía"
-          },
-          {
-            "nombre": "Inversiones Oshala S.A.",
-            "cedula": "3-101-870664",
-            "participacion_inicial": "15%",
-            "participacion_adicional": "+3% (1% por local entregado, hasta 3)",
-            "participacion_maxima": "18%",
-            "representante": "Gabriel Jafet Carmona"
-          }
-        ],
-        "mayoria_calificada": "70%",
-        "lock_up": "2 años desde firma",
-        "tag_along": "Si venta >= 50%+1, 15 días ejercer",
-        "drag_along": "Libertario con 50%+1, después de 2 años",
-        "rofo": "10 días first offer",
-        "ley_aplicable": "New York, USA",
-        "arbitraje": "ICC, New York, inglés, 3 árbitros"
-      }
-    },
-    "mexico": {
-      "nombre": "Libertario Coffee Roasters S.A.P.I. de C.V.",
-      "jurisdiccion": "México",
-      "sha": {
-        "fecha": "2023-08-22",
-        "partes": [
-          {
-            "nombre": "Libertario Coffee Roasters Corp (Panamá)",
-            "participacion": "75%"
-          },
-          {
-            "nombre": "Masanamacaya Holdings S.A. de C.V.",
-            "participacion": "25%",
-            "representante": "Cristina Macaya Dávila",
-            "condiciones": "20% inicial + 5% al abrir primer local CDMX"
-          }
-        ],
-        "composicion_feb_2025": {
-          "libertario_corp": "75%",
-          "masanamacaya": "25%"
-        },
-        "mayoria_calificada": "76%",
-        "lock_up": "Hasta agosto 2024",
-        "tag_along": "Si venta >= 50%+1",
-        "drag_along": "Libertario con 50%",
-        "rofo": "10 días first offer",
-        "ley_aplicable": "New York, USA",
-        "arbitraje": "ICC, New York, inglés, 3 árbitros"
+      "porcentaje_lcr": 74,
+      "socio_local": {
+        "nombre": "Inversiones Oshala S.A.",
+        "porcentaje_rango": "16-18%",
+        "representante": "Gabriel Jafet Carmona"
       },
-      "capitalizacion": {
-        "fecha": "2023-12-20",
-        "deuda_capitalizada": "USD 3,000,000 de préstamos",
-        "aporte_masanamacaya": "MXN 1,000,000"
-      }
-    },
-    "usa": {
-      "nombre": "Futura Coffee Roasters LLC",
-      "jurisdiccion": "Delaware, USA",
-      "fecha_formacion": "2023-05-15",
-      "fecha_operating_agreement": "2023-05-20",
-      "participacion_holding": "100%",
-      "manager": {
-        "nombre": "Sebastian Villamizar Aristizabal",
-        "pasaporte": "AQ107672"
-      },
-      "estructura": "LLC manager-managed",
-      "distribucion": "A discreción del Manager",
-      "ley_aplicable": "Delaware"
+      "sha_status": "COMPLETO",
+      "sha_fecha": "2023-03-03",
+      "mayoria_calificada": 70
     },
     "india": {
-      "nombre": "Libertario Coffee Roasters Private Limited",
+      "nombre": "Libertario Coffee Roasters PVT. LTD",
       "jurisdiccion": "India (Delhi)",
-      "tipo": "Private Limited Company",
-      "ley": "Companies Act 2013",
-      "capital_autorizado": {
-        "monto": "INR 25,00,000",
-        "acciones": 25000,
-        "valor_nominal": "INR 100"
-      },
-      "suscriptores": [
-        {
-          "nombre": "Miguel Eduardo Villaquirán",
-          "acciones": 23750,
-          "participacion": "95%",
-          "direccion": "KCA-209 Kings Court W Block, Greater Kailash II, South Delhi"
-        },
-        {
-          "nombre": "Arushi Mehra",
-          "acciones": 1250,
-          "participacion": "5%",
-          "din": "09278447"
+      "porcentaje_lcr": 55,
+      "socio_local": {
+        "nombre": "Miguel Eduardo Villaquiran",
+        "porcentaje": 45,
+        "vesting_adicional": {
+          "holding": "hasta 2%",
+          "india_newco": "hasta 5%",
+          "milestones": ["USD 3M", "USD 6M"]
         }
-      ],
-      "directores": [
-        {"nombre": "Arushi Mehra", "din": "09278447"},
-        {"nombre": "Rajnish Mehra", "din": "00271477"}
-      ],
-      "fecha_documentos": "2025-01-13",
-      "notas": "SHA separado con Miguel Villaquirán - archivo vacío, requiere PDF"
-    },
-    "chile": {
-      "nombre": "Libertario Coffee Roasters SpA",
-      "jurisdiccion": "Chile",
-      "notas": "Documento de constitución disponible (2KB)"
+      },
+      "sha_status": "COMPLETO",
+      "sha_analisis": "02-02-2026",
+      "sha_documento": "Stockholders_Agreement_Libertario_India_MAYO_5_2025.pdf",
+      "mayoria_calificada": 70,
+      "lock_up": "5 años",
+      "drag_floor": 20000000,
+      "ley_aplicable": "New York, USA",
+      "arbitraje": "ICC New York"
     }
+  },
+  "documentos_pendientes": {
+    "cap_tables_detallados": {
+      "total": 7,
+      "lista": ["Panama Holding", "USA", "Colombia", "Mexico", "Chile", "Costa Rica", "India"]
+    },
+    "actas_asamblea_2024_2025": {
+      "total": 3,
+      "lista": ["Libertario Holding", "LCR Corp", "Arlen Development"]
+    },
+    "certificados_existencia": {
+      "total": 9,
+      "lista": ["Panama Holding", "LCR Corp", "Arlen Development", "USA", "Colombia", "Mexico", "Chile", "Costa Rica", "India"]
+    },
+    "total_pendientes": 19
+  },
+  "sha_resumen": {
+    "completados": 7,
+    "pendientes": 0,
+    "detalle": [
+      {"pais": "Panama", "status": "COMPLETO", "fecha": "30-01-2026"},
+      {"pais": "Colombia", "status": "NO_EXISTE", "fecha": "30-01-2026"},
+      {"pais": "Costa Rica", "status": "COMPLETO", "fecha": "30-01-2026"},
+      {"pais": "Mexico", "status": "COMPLETO", "fecha": "30-01-2026"},
+      {"pais": "USA", "status": "COMPLETO", "fecha": "30-01-2026"},
+      {"pais": "India", "status": "COMPLETO", "fecha": "02-02-2026"},
+      {"pais": "Chile", "status": "COMPLETO", "fecha": "02-02-2026"}
+    ]
   }
 }

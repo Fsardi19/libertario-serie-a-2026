@@ -579,3 +579,70 @@ Solicitar al equipo legal:
 - Revisar Chile cuando lleguen documentos
 - Procesar SHA Colombia cuando llegue version digital
 - Comenzar analisis financiero si legal esta completo
+
+---
+
+## Sesion: 2026-02-02 - Due Diligence Legal COMPLETADO
+
+### Objetivo
+Completar analisis de SHA pendientes (India y Chile) y actualizar estructura corporativa con datos del Data Room.
+
+### Completado
+
+**SHA India - ANALIZADO:**
+- Documento: Stockholders_Agreement_Libertario_India_MAYO_5_2025.pdf
+- Estructura: Libertario Holding 55% / Miguel Villaquiran 45%
+- Lock-up: 5 años
+- Drag Floor: $20,000,000
+- Mayoria calificada: 70%
+- Vesting MV: Hasta 2% en Holding + 5% en India NewCo (milestones $3M/$6M)
+- Ley aplicable: New York, USA
+- Arbitraje: ICC New York
+
+**SHA Chile - ANALIZADO:**
+- Documento: LIBERTARIO COFFEE ROASTERS COPR. - Santiago Botero PdA - Libertario Coffee Roasters SpA - firmado (1).pdf
+- Estructura: Libertario Corp 92.5% / SAMA SpA (Santiago Botero) 7.5%
+- Vesting adicional: 7.5% (2.5% por año, 3 años)
+- Lock-up: Hasta diciembre 2027
+- Mayoria calificada: 86%
+- Non-compete: Chile + 2 años post-salida
+- Arbitraje: ICC New York
+
+**Estructura Corporativa Corregida:**
+- Chile: 92.5% (no 85% como se tenia antes)
+- Costa Rica: 74% (no 82-85% como se tenia antes)
+- Confirmado: 2 niveles en Panama (Libertario Holding → LCR Corp → Subsidiarias)
+
+**Cap Tables Documentados:**
+- LCR Corp: Arlen 52.32%, Cassland 40.02%, Bagua 2.79%, SI&B 1.90%, Ladino 1.48%, Villamizar 1.48%
+- Arlen Development: Coffee Hub 54.10%, IC 34.40%, Villamizar 5.30%, Pinzon 3.00%, Escobar 1.60%, Reyes 1.60%
+- Beneficial Ownership: Felipe Sardi 38.02%, Orlando Sardi 15.44%, Sebastian Villamizar 8.26%, etc.
+
+### Archivos Modificados
+
+| Archivo | Accion |
+|---------|--------|
+| .claude/PROGRESO.md | ACTUALIZADO - Estructura corporativa completa |
+| output/legal/DOCUMENTOS_PENDIENTES_LEGAL.md | ACTUALIZADO - SHA completos, pendientes listados |
+| output/legal/estructura_corporativa.json | ACTUALIZADO - Datos estructurados completos |
+| output/legal/archivos_pendientes.txt | ACTUALIZADO - SHA India y Colombia marcados resueltos |
+
+### Estado Final Due Diligence Legal
+
+| Categoria | Completado | Pendiente |
+|-----------|------------|-----------|
+| SHA (7 paises) | **7/7** | 0 |
+| Cap Tables detallados | 1/8 | 7 |
+| Actas Asamblea Panama | 0/3 | 3 |
+| Certificados Existencia | 0/9 | 9 |
+
+**Total documentos pendientes para Data Room:** 19
+
+### Pendiente
+- Cap tables actualizados (pendiente aporte en especie Colombia mid-Feb)
+- Certificados de existencia actualizados (9 paises/entidades)
+- Actas de asamblea Holding 2024-2025 (3 entidades Panama)
+
+### Proxima Sesion
+- Seguimiento cap tables cuando esten disponibles
+- Preparacion final Data Room para inversionistas Serie A

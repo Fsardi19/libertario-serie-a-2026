@@ -4,17 +4,17 @@
 ## PDFs ESCANEADOS (archivos .txt vacíos que requieren OCR o PDF original)
 
 ### ALTA PRIORIDAD - Documentos clave para Due Diligence
-1. COLOMBIA - SHA - Libertario Coffee Roasters Corp VF SIGNED.txt
-   Ubicación PDF: DATA ROOM LIBERTARIO 2025/1. CORPORATIVOS-CORPORATE/1.2 COLOMBIA/ENGLISH/
-   Razón: SHA Colombia firmado - crítico para estructura
 
-2. COLOMBIA - First Amendment to SHA.txt
-   Ubicación PDF: DATA ROOM LIBERTARIO 2025/1. CORPORATIVOS-CORPORATE/1.2 COLOMBIA/ENGLISH/
-   Razón: Enmienda al SHA - puede contener términos modificados
+## RESUELTOS:
 
-3. INDIA - Shareholders Agreement Miguel Villaquiran.txt
-   Ubicación PDF: DATA ROOM LIBERTARIO 2025/1. CORPORATIVOS-CORPORATE/1.7 INDIA/
-   Razón: SHA con socio local India - crítico para estructura
+1. ~~COLOMBIA - SHA~~ - NO EXISTE (Libertario Corp 100% dueño, confirmado Ana María Peláez 30-01-2026)
+
+2. ~~COLOMBIA - First Amendment to SHA~~ - NO EXISTE (no hay SHA, no puede haber enmienda)
+
+3. ~~INDIA - Shareholders Agreement Miguel Villaquiran~~ - ANALIZADO 02-02-2026
+   Archivo: Stockholders_Agreement_Libertario_India_MAYO_5_2025.pdf
+   Estructura: Libertario Holding 55% / MV 45%
+   Firmado: DocuSign 09/06/2025
 
 ### MEDIA PRIORIDAD - Documentos corporativos
 4. COLOMBIA - ESTATUTOS LIBERTARIO COFFEE ROASTERS S.A.S..txt
