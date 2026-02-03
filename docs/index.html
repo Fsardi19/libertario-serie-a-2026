@@ -400,8 +400,8 @@
 
             .section { margin-bottom: 30px; }
             .section-header { margin-bottom: 20px; padding-bottom: 12px; }
-            .section-header .icon { width: 40px; height: 40px; font-size: 1.2rem; }
-            .section-header h2 { font-size: 1.1rem; }
+            .section-header .icon { width: 36px; height: 36px; font-size: 1rem; border-radius: 8px; }
+            .section-header h2 { font-size: 1rem; }
 
             .pipeline-card .card-header { padding: 15px; }
             .card-title h3 { font-size: 1rem; }
@@ -418,18 +418,25 @@
             .gallery-item .overlay h4 { font-size: 0.85rem; }
             .gallery-item .overlay span { font-size: 0.7rem; }
 
-            /* Tabla en móvil - scroll horizontal */
-            .projection-table { font-size: 0.75rem; display: block; overflow-x: auto; }
-            .projection-table th, .projection-table td { padding: 8px 6px; white-space: nowrap; }
-            .projection-table tr.store-row td:first-child { padding-left: 12px; }
+            /* Timeline compacto para móvil */
+            .timeline-container { padding: 10px; border-radius: 12px; }
+            .timeline { min-width: 400px; gap: 0; }
+            .timeline-month { padding: 8px 4px; }
+            .month-label { font-size: 0.65rem; margin-bottom: 8px; }
+            .timeline-item { padding: 4px 6px; font-size: 0.55rem; margin-bottom: 4px; border-radius: 4px; }
+            .timeline-items { gap: 4px; }
+            .month-revenue { margin-top: 8px; padding-top: 8px; }
+            .month-revenue .label { font-size: 0.5rem; }
+            .month-revenue .value { font-size: 0.75rem; }
 
-            /* Timeline más compacto */
-            .timeline-container { padding: 15px; }
-            .timeline { min-width: 500px; }
-            .timeline-month { padding: 12px 6px; }
-            .month-label { font-size: 0.8rem; margin-bottom: 10px; }
-            .timeline-item { padding: 6px 8px; font-size: 0.65rem; }
-            .month-revenue .value { font-size: 0.9rem; }
+            /* Tabla compacta para móvil */
+            .projection-table { font-size: 0.65rem; display: block; overflow-x: auto; border-radius: 8px; }
+            .projection-table th { padding: 8px 5px; font-size: 0.6rem; }
+            .projection-table td { padding: 6px 5px; }
+            .projection-table th.amount, .projection-table td.amount { text-align: right; }
+            .projection-table tr.store-row td:first-child { padding-left: 10px; }
+            .projection-table tr.country-row td { font-size: 0.7rem; }
+            .projection-table tr.total-row td { font-size: 0.75rem; }
 
             .footer { padding: 15px; }
             .footer p { font-size: 0.75rem; }
