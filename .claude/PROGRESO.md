@@ -1,6 +1,6 @@
 # Progreso - SERIE A 2026 Libertario
 
-**Ultima actualizacion:** 2026-02-02 (Sesion 8 - Pipeline Tiendas + GitHub Pages)
+**Ultima actualizacion:** 2026-02-02 (Sesion 8 - Pipeline Tiendas + GitHub Pages + Responsive)
 **Estado General:** EN CURSO
 
 ## Objetivo Final
@@ -475,7 +475,11 @@ SERIE A 2026/
 │       ├── inventario_data_room.md
 │       ├── archivos_pendientes.txt
 │       └── sha_analisis.md
+├── docs/                                    <- GitHub Pages
+│   ├── index.html                           <- Dashboard publico
+│   └── fotos_obra/                          <- Imagenes
 └── .claude/
     ├── PROGRESO.md                          <- Este archivo
-    └── SESSION_LOG.md
+    ├── SESSION_LOG.md
+    └── GUIA_DASHBOARDS.md                   <- Guia de estilos y responsive
 ```
