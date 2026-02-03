@@ -82,6 +82,88 @@ Completar análisis de gobernanza corporativa para inversionistas y preparar doc
 
 ---
 
+## Sesion: 2026-02-03 - Newsletter Deep Dive para Inversionistas + PDF Profesional
+
+### Objetivo
+Crear contenido profundo (deep dive) por mercado y finanzas basado en el Newsletter de enero 2026, cruzando datos con Comite Directivo, FDC Semanal, Pipeline y Embudo para dar mayor visibilidad a inversionistas.
+
+### Completado
+
+**Analisis Newsletter Enero 2026:**
+- Lectura completa del PDF "ENG-FuturaandLibertario Newsletter January" (10 paginas)
+- Identificacion de 7 mercados cubiertos: Colombia, Mexico, Costa Rica, USA, Chile, India, Wholesale
+- Extraccion de texto del Comite Directivo 30-01-2026 con pymupdf
+- Cruce de datos con FDC Semanal (flujo de caja semanal por pais)
+- Cruce con Embudo de inversionistas actualizado
+
+**Dashboard HTML Interactivo - 15 Secciones:**
+
+*7 Deep Dives por Mercado:*
+1. Colombia - $3.5M→$6.7M, 10→16 tiendas, fotos obra Cedritos/Laureles
+2. Mexico - $0.5M→$1.7M, 2→6 tiendas, fotos obra Puebla
+3. Costa Rica - $0.2M→$0.7M, 1→2 tiendas, Escazu en construccion
+4. USA - $1.5M→$1.6M, 4 tiendas estables, foco wholesale
+5. Chile - $0→$0.8M, primera tienda Nueva Costanera
+6. India - $0.4M→$3.2M, 1→6 tiendas, mayor crecimiento relativo
+7. Wholesale - $0.8M→$1.7M, expansion cuentas Tier 1+2
+
+*8 Secciones Financieras:*
+8. P&L Consolidado (2025 vs 2026)
+9. EBITDA Bridge (-$0.8M → +$0.7M)
+10. Cash Flow Forecast (FDC Semanal Feb-Mar)
+11. Capital Needs & Funding Gap ($3.3M / $1.4M gap)
+12. Unit Economics por Mercado
+13. What Changed vs Plan
+14. Investor Funnel (51 contactos, $4.2M cerrado)
+15. Expansion Timeline
+
+**PDF Profesional:**
+- Version HTML optimizada para impresion (A4, page breaks, sin nav)
+- Portada profesional con gradiente y 4 KPIs clave
+- Fotos de obra embebidas en base64
+- Generado con Chrome headless (1.9MB)
+
+### Archivos Creados/Modificados
+
+| Archivo | Accion |
+|---------|--------|
+| output/presentacion/NEWSLETTER_DEEP_DIVE_JANUARY_2026.html | CREADO - Dashboard interactivo (866KB) |
+| output/presentacion/NEWSLETTER_DEEP_DIVE_JANUARY_2026_PDF.html | CREADO - Version optimizada PDF |
+| output/presentacion/NEWSLETTER_DEEP_DIVE_JANUARY_2026.pdf | CREADO - PDF profesional (1.9MB) |
+| .claude/PROGRESO.md | ACTUALIZADO |
+| .claude/SESSION_LOG.md | ACTUALIZADO |
+
+### Datos Clave Cruzados
+
+**Fuentes utilizadas:**
+- Newsletter Enero 2026 (PDF 10 paginas)
+- Comite Directivo 30-01-2026 (PDF 16 paginas, extraido con pymupdf)
+- FDC Semanal (Excel - flujo de caja semanal por pais)
+- Embudo Inversionistas (Excel - 51 contactos)
+- Pipeline Tiendas (HTML existente)
+- datos_comite_directivo_20260130.json
+- datos_informe_junta.json
+
+**Metricas destacadas del Deep Dive:**
+| Metrica | 2025 Real | 2026 Plan |
+|---------|-----------|-----------|
+| Ventas | $7.2M | $16.7M (+132%) |
+| EBITDA | -$0.8M | +$0.7M |
+| Tiendas | 18 | 38 |
+| Break-even | - | Julio 2026 |
+
+### Pendiente
+- Feedback de socios sobre nivel de detalle del deep dive
+- Actualizacion mensual con datos de febrero 2026
+- Posible publicacion en GitHub Pages
+
+### Proxima Sesion
+- Seguimiento respuestas inversionistas
+- Actualizacion datos febrero si hay nuevos reportes
+- Preparacion Junta Directiva 19 febrero
+
+---
+
 ## Sesion: 2026-01-28 - Setup Inicial y FASE 1-2
 
 ### Objetivo

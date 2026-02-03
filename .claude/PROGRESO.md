@@ -1,6 +1,6 @@
 # Progreso - SERIE A 2026 Libertario
 
-**Ultima actualizacion:** 2026-02-02 (Sesion 8 - Pipeline Tiendas + GitHub Pages + Responsive)
+**Ultima actualizacion:** 2026-02-03 (Sesion 9 - Newsletter Deep Dive + PDF Profesional)
 **Estado General:** EN CURSO
 
 ## Objetivo Final
@@ -121,6 +121,8 @@ Seguimiento continuo de datos financieros y operativos
 | datos_informe_junta.json | Datos estructurados para trazabilidad | ENTREGADO |
 | DASHBOARD_EMBUDO_INVERSIONISTAS.html | Dashboard interactivo embudo | ENTREGADO |
 | PIPELINE_TIENDAS_FEBRERO_2026.html | Pipeline de tiendas con fotos | ENTREGADO |
+| NEWSLETTER_DEEP_DIVE_JANUARY_2026.html | Deep Dive 15 secciones (mercados + finanzas) | ENTREGADO |
+| NEWSLETTER_DEEP_DIVE_JANUARY_2026.pdf | PDF profesional para enviar a socios | ENTREGADO |
 
 ---
 
@@ -456,7 +458,10 @@ SERIE A 2026/
 │   │   ├── INFORME_JUNTA_SERIE_A_2026_PDF.html
 │   │   ├── INFORME_JUNTA_SERIE_A_2026.md
 │   │   ├── DASHBOARD_EMBUDO_INVERSIONISTAS.html
-│   │   └── DASHBOARD_KPIs_ROMAN.html        <- Dashboard KPIs Roman
+│   │   ├── DASHBOARD_KPIs_ROMAN.html        <- Dashboard KPIs Roman
+│   │   ├── NEWSLETTER_DEEP_DIVE_JANUARY_2026.html  <- Deep Dive interactivo (15 secciones)
+│   │   ├── NEWSLETTER_DEEP_DIVE_JANUARY_2026_PDF.html <- Version optimizada PDF
+│   │   └── NEWSLETTER_DEEP_DIVE_JANUARY_2026.pdf   <- PDF profesional para socios
 │   ├── datos/
 │   │   ├── datos_informe_junta.json
 │   │   ├── datos_comite_directivo_20260130.json
