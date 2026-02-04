@@ -446,11 +446,84 @@ LIBERTARIO HOLDING (Panama)
 
 ---
 
+## Libertario Hospitality - Deck Comercial B2B (Febrero 2026)
+
+**Fuente:** `LIBERTARIO HOSPITALITY.pdf` (31 paginas, Canva, 4-Feb-2026)
+**Contacto comercial:** Sandra Ayala, Regional Sales, (+57)3104819805, regionalsales@libertariocoffee.com
+
+### Concepto
+Libertario Hospitality es el brazo B2B/wholesale de Libertario Coffee. Ofrece soluciones integrales de cafe de especialidad para clientes institucionales. Mas de 10 anos de experiencia. Slogan: "Por la libertad de vivir el cafe."
+
+### Segmentos Objetivo
+1. **Cafeterias & Restaurantes** - Integracion de cafe premium en menus
+2. **Hoteles & Hospitalidad** - Experiencia de cafe en hospitality
+3. **Oficinas & Corporate** - Servicio de cafe corporativo
+4. **Eventos & Catering** - Estaciones de cafe para eventos
+5. **Tiendas Especializadas** - Retail multimarca
+
+### Oferta (3 Pilares)
+
+| Pilar | Que incluye |
+|-------|-------------|
+| **Coffees** | Blends, Single Origins, Capsulas, Drip Bags, Cold Brew (RTD) |
+| **Coffee Ways** | Curaduria de equipos para cada espacio (seleccion, instalacion) |
+| **Coffee Expertise** | Capacitacion (3 etapas c/15 dias), soporte de marca, material POP |
+
+### Catalogo de Productos
+
+**Blends (grano/molido - 2.5kg, 200g, 340g, 454g):**
+| Producto | Perfil | Descripcion |
+|----------|--------|-------------|
+| PAZ | Balanceado & Acaramelado | Redondo y suave, matices dulces |
+| LIBRE | Intenso & Afrutado | Vibrante y expresivo, matices frutales |
+
+**Single Origins (grano/molido - 200g, 340g, 454g):**
+| Producto | Perfil | Descripcion |
+|----------|--------|-------------|
+| ROCK | Rebelde & Exotico | Variedades exoticas, fermentaciones innovadoras |
+| PUNK | Extravagante & Jugoso | Variedades excepcionales, fermentaciones experimentales |
+
+**Linea Impacto:**
+| Producto | Perfil | Descripcion |
+|----------|--------|-------------|
+| IMPACTO | Cultivos Organicos | Practicas sostenibles, perfil limpio y equilibrado |
+
+**Single Serve & RTD:**
+- Capsulas compatibles
+- Drip Coffee
+- Cold Brew (listo para tomar)
+
+### Diferenciadores
+1. **Calidad y Experiencia:** 10+ anos, reconocimiento internacional, 20+ tiendas propias
+2. **Conexion con Origen:** Relacion directa con caficultores, diversidad de terroirs, transparencia
+3. **Mision Regenerativa:** 3% de ventas destinado a agricultura regenerativa en Colombia
+
+### Planta de Produccion
+- Disenada para crecimiento acelerado
+- Procesos estandarizados de tostion
+- Control de inventarios y gestion de calidad
+- Abastece: coffee shops + canal institucional + B2B
+- Capacidad para escalar a Colombia, Mexico, Chile, India, USA
+
+### Servicios Adicionales
+- **Curaduria de equipos:** Seleccion segun consumo, menu y tipo de espacio
+- **Capacitacion:** Plan de 3 etapas cada 15 dias, entrenamiento continuo
+- **Marca en espacio:** Elementos visuales, material POP, presencia de marca
+
+### Relevancia para Serie A
+- Soporta la proyeccion wholesale de $0.8M (2025) → $1.7M (2026)
+- Directamente relacionado con KPIs de Roman Irrure (cuentas Tier 1+2, margen wholesale)
+- Demuestra sofisticacion del canal B2B ante inversionistas
+- Complementa el modelo retail con revenue institucional
+
+---
+
 ## Archivos del Proyecto
 
 ```
 SERIE A 2026/
 ├── 20260130 - Comite Directivo.pdf          <- Datos actualizados
+├── LIBERTARIO HOSPITALITY.pdf               <- Deck comercial B2B (31 pags, 49MB)
 ├── output/
 │   ├── presentacion/
 │   │   ├── INFORME_JUNTA_SERIE_A_2026.pdf   <- ENTREGABLE FINAL
@@ -465,7 +538,8 @@ SERIE A 2026/
 │   ├── datos/
 │   │   ├── datos_informe_junta.json
 │   │   ├── datos_comite_directivo_20260130.json
-│   │   └── CONVERTIBLE_LOAN_AGREEMENT_TEMPLATE.md  <- NUEVO
+│   │   ├── datos_libertario_hospitality.json        <- Texto extraido del deck B2B
+│   │   └── CONVERTIBLE_LOAN_AGREEMENT_TEMPLATE.md
 │   ├── ESCENARIOS_NEGOCIACION_ROMAN.md
 │   ├── KPIs_WHOLESALE_ROMAN.md
 │   ├── EMAIL_JUNTA_SERIE_A.md
